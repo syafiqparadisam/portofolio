@@ -1,5 +1,5 @@
 import { Show ,Flex, Heading, Text, Link, Box, List, ListItem, Grid, GridItem, Hide } from '@chakra-ui/react'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { BsGithub, BsInstagram, BsTiktok, BsYoutube } from "react-icons/bs"
 import { NavLink } from 'react-router-dom'
 import { BiCopyright } from "react-icons/bi"
@@ -20,7 +20,6 @@ const Footer = () => {
     alignItems="center"
     as="footer"
     flexDirection={'column'}
-    overflow={'hidden'}
     >   
         <Grid py="20px" justifyContent={'center'} templateColumns={{base: 'repeat(3, 70px)',sm: 'repeat(3, 1fr)'}} templateRows={{base: '1fr, 1fr', sm: '1fr'}} w={'100vw'}>
             <GridItem textAlign="center" colStart={1} rowStart={1}>
@@ -43,10 +42,10 @@ const Footer = () => {
                 </List>
             </GridItem>
             <GridItem flexDir={'column'} textAlign="center" colStart={{base: 3, md: 3}} rowStart={1}>
-                <NavLink to={'/'} style={{color: 'white', display: 'block', fontWeight: 'bold', fontSize: '17px'}}>Home</NavLink>
-                <NavLink to={'/client'} style={{color: 'white', display: 'block', fontWeight: 'bold', fontSize: '17px', marginBlock: '5px'}}>Client</NavLink>
-                <NavLink to={'/portofolio'} style={{color: 'white', display: 'block', fontWeight: 'bold', fontSize: '17px'}}>Portofolio</NavLink>
-                <NavLink to={'/services'} style={{color: 'white', display: 'block', fontWeight: 'bold', fontSize: '17px', marginBlock: '5px'}}>Services</NavLink>
+                <NavLink to={'/portofolio'} style={{color: 'white', display: 'block', fontWeight: 'bold', fontSize: '17px'}}>Home</NavLink>
+                <NavLink to={'portofolio/client'} style={{color: 'white', display: 'block', fontWeight: 'bold', fontSize: '17px', marginBlock: '5px'}}>Client</NavLink>
+                <NavLink to={'/portofolio/portofolio'} style={{color: 'white', display: 'block', fontWeight: 'bold', fontSize: '17px'}}>Portofolio</NavLink>
+                <NavLink to={'/portofolio/service'} style={{color: 'white', display: 'block', fontWeight: 'bold', fontSize: '17px', marginBlock: '5px'}}>Services</NavLink>
             </GridItem>
             <GridItem textAlign={'center'} wrap={'wrap'} colStart={{base: 2, md: 2}} rowStart={{base: 2, md: 1}}>
                 <Text onClick={() => goto(0)} color={'white'} display={'inline-block'} fontSize={'15px'} fontWeight={'bold'}>Up<AiOutlineArrowUp color='white' size={'25px'} display={'inline-block'}/></Text>

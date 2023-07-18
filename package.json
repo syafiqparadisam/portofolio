@@ -1,6 +1,7 @@
 {
   "name": "portofolio",
   "private": true,
+  "homepage": "https://syafiqparadisam.github.io/portofolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

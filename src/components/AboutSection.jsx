@@ -22,7 +22,7 @@ const AboutSection = () => {
     width="100%"
     height="100%"
     flexDirection="column"
-    bgImg="url(./portofolio/src/image/2.jpg)"
+    bgImg="url(./src/image/2.jpg)"
     backgroundAttachment={'fixed'}
     backgroundSize={'cover'}
     backgroundPosition={'center'}

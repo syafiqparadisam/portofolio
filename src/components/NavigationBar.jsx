@@ -50,13 +50,13 @@ const NavigationBar = () => {
         <Hide below="md">
           <List display={'flex'} as="nav" p="8px" m="5px">
             <ListItem color={'white'} py={'8px'} px={'15px'} borderRadius={'15px'} _hover={{backgroundColor: 'black'}}>
-              <Link to="/">Home</Link>
+              <Link to="/portofolio/">Home</Link>
             </ListItem>
             <ListItem color={'white'} mx={'5px'} py={'8px'} px={'15px'} borderRadius={'15px'} _hover={{backgroundColor: 'black'}}>
-              <Link to="/client">Client</Link>
+              <Link to="/portofolio/client">Client</Link>
             </ListItem>
             <ListItem color={'white'} py={'8px'} px={'15px'} borderRadius={'15px'} _hover={{backgroundColor: 'black'}}>
-              <Link to="/portofolio">Portofolio</Link>
+              <Link to="/portofolio/portofolio">Portofolio</Link>
             </ListItem>
           </List>
         </Hide>
@@ -74,19 +74,19 @@ const NavigationBar = () => {
                     setDropdown(false)
                   }}/></Text>
               </Flex>
-              <Link to={'/'} style={{width: '100%'}} onClick={() => setDropdown(false)}>
+              <Link to={'/portofolio/'} style={{width: '100%'}} onClick={() => setDropdown(false)}>
                 <Flex color={'white'} p={'5px'} _hover={{backgroundColor: 'gray'}} textAlign={'center'} justifyContent={'center'} alignItems={'center'}>
                   <AiFillHome color="white" style={{marginRight: '5px'}}/>Home
                 </Flex>
               </Link>
               <hr style={{width: '90%'}}/>
-              <Link to={'/client'} style={{width: '100%'}} onClick={() => setDropdown(false)}>
+              <Link to={'/portofolio/client'} style={{width: '100%'}} onClick={() => setDropdown(false)}>
                 <Flex p="5px" color={'white'} _hover={{backgroundColor: 'gray'}} textAlign={'center'} justifyContent={'center'} alignItems={'center'}>
                   <BsPeopleFill color={'white'} style={{marginRight: '5px'}}/>Client
                 </Flex>
               </Link>
               <hr style={{width: '90%'}}/>
-              <Link to={'/portofolio'} style={{width: '100%'}} onClick={() => setDropdown(false)}>
+              <Link to={'/portofolio/portofolio'} style={{width: '100%'}} onClick={() => setDropdown(false)}>
                 <Flex p="5px" color={'white'} _hover={{backgroundColor: 'gray'}} textAlign={'center'} justifyContent={'center'} alignItems={'center'}>
                   <BsListCheck  size="20px" color="white" style={{marginRight: '5px', fontWeight: 'bolder'}}/>Portofolio
                 </Flex> 
