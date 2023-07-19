@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import Projek from "../components/Projek"
 import { CardContext } from '../Hooks/CardContext'
+import imageportofolio from '../assets/portofolioweb.png'
 
 const Portofolio = () => {
   const card = useContext(CardContext)
@@ -8,7 +9,7 @@ const Portofolio = () => {
  
  
   const cardArray1 = [
-    card('PORTOFOLIO WEB', "fade-right", 'SEE','/src/image/portofolioweb.png', '/'),
+    card('PORTOFOLIO WEB', "fade-right", 'SEE', imageportofolio, '/'),
   ]
   const cardArray2 = [
    card('TO DO LIST', "fade-down",)

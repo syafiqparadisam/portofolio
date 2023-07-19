@@ -1,8 +1,9 @@
 import {Box, Flex, Heading, Card, CardBody} from "@chakra-ui/react"
-import { useRef, useEffect } from "react"
+import { useEffect } from "react"
 import Formcontrol from "../EachComponent/Formcontrol"
 import AOS from "aos"
 import "aos/dist/aos.css"
+import image5 from '../assets/5.jpg'
 
 const Form = () => {
   
@@ -20,7 +21,7 @@ const Form = () => {
     w="100%"
     h="100%"
     as="section"
-    backgroundImage="url(./src/image/5.jpg)"
+    backgroundImage={image5}
     backgroundAttachment={'fixed'}
     backgroundSize={'cover'}
     backgroundPosition={'center'}

@@ -1,5 +1,4 @@
-import { Show ,Flex, Heading, Text, Link, Box, List, ListItem, Grid, GridItem, Hide } from '@chakra-ui/react'
-import { useEffect } from 'react'
+import { Show ,Flex, Text, Link, Box, List, ListItem, Grid, GridItem } from '@chakra-ui/react'
 import { BsGithub, BsInstagram, BsTiktok, BsYoutube } from "react-icons/bs"
 import { NavLink } from 'react-router-dom'
 import { BiCopyright } from "react-icons/bi"

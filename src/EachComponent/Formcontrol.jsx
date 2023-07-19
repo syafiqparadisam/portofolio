@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import { Grid, useToast, CircularProgress, GridItem, FormControl, FormLabel, Button, Flex, Link, Input, Textarea, Box } from "@chakra-ui/react"
+import { Grid, useToast, CircularProgress, GridItem, FormControl, FormLabel, Flex, Link, Input, Textarea, Box } from "@chakra-ui/react"
 import { BsGithub, BsInstagram, BsTiktok, BsYoutube } from "react-icons/bs"
 import emailjs from '@emailjs/browser';
 
@@ -34,7 +34,7 @@ const Formcontrol =() => {
 
 return (
     
-        <form ref={form} onSubmit={sendEmail} h='100%'>
+        <form ref={form} onSubmit={sendEmail}>
    
             <Grid templateColumns={{base: '1fr',md: 'repeat(5, 1fr)'}} templateRows={{base: '1fr, 1fr, 1fr, 3fr', md: 'repeat(3, 1fr)'}} gap={{base: 1, md: 5}} w="100%">
                 <GridItem colStart="1" colEnd={{base: 0, md: 3}} rowStart={1}>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import Aos from "aos"
 import { useEffect } from "react"
 import "aos/dist/aos.css"
+import image4 from '../assets/4.jpg'
 
 const Projek = ({ card1, card2, card3, card4, text = 'My Project', py = '50px', cardProject, scrollOverflow = 'scroll',button = true, hiddenOverflow = 'hidden', height = '100%', cardBASEHeight, cardMDHeight = '100%'}) => {
     
@@ -23,7 +24,7 @@ const Projek = ({ card1, card2, card3, card4, text = 'My Project', py = '50px', 
     flexDirection="column"
     bgAttachment={'fixed'}
     bgPos={'center'}
-    bgImage="url(./src/image/4.jpg)"
+    bgImage={image4}
     bgSize={'cover'}
     py={py}
     as="section"
@@ -40,7 +41,7 @@ const Projek = ({ card1, card2, card3, card4, text = 'My Project', py = '50px', 
                 <CardBody w="100%" overflow={ hiddenOverflow }>
                     <Flex overflow={ scrollOverflow } wrap={'wrap'} justifyContent={'center'} alignItems={'center'}>
                         <Box>
-                            { ...card1}
+                            { ...card1 }
                         </Box>
                         <Box>
                             { ...card2 }

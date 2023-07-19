@@ -1,3 +1,4 @@
+import image5 from '../assets/5.jpg'
 import { Box, Flex, Heading, Grid, GridItem } from "@chakra-ui/react"
 import CardTestimonial from "../EachComponent/CardTestimonial"
 
@@ -11,7 +12,7 @@ const Testimonial = () => {
     minH={'100vh'}
     bgAttachment={'fixed'}
     bgPos={'center'}
-    bgImage="url(./src/image/5.jpg)"
+    bgImage={image5}
     bgSize={'cover'}
     >
         <Box w={'100%'} mx={'auto'} py={'10px'} my={'8'}>

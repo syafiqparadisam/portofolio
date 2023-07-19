@@ -5,6 +5,7 @@ import TechSkill from "../EachComponent/TechSkill"
 import AOS from "aos"
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
+import image1 from "../assets/1.jpg"
 
 const Skill = () => {
     useEffect(() => {
@@ -22,7 +23,7 @@ const Skill = () => {
     h={{base: '100%', lg: '100vh'}}
     bgAttachment={'fixed'}
     bgPos={'center'}
-    bgImage="url(./src/image/1.jpg)"
+    bgImage={image1}
     bgSize={'cover'}
     overflow={'hidden'}
     pb={8}

@@ -1,4 +1,4 @@
-import { ModalBody, useDisclosure, Button, ModalCloseButton, ModalOverlay, Modal, ModalContent, ModalHeader, ModalFooter, Card, CardBody, CardFooter, CardHeader, Image, Link, Text, Box} 
+import { ModalBody, useDisclosure, Button, ModalCloseButton, ModalOverlay, Modal, ModalContent, ModalHeader, Card, CardBody, CardFooter, CardHeader, Image, Text, Box} 
 from "@chakra-ui/react"
 import { useRef, useState, useEffect } from "react"
 import AOS from "aos"

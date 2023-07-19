@@ -1,19 +1,18 @@
 
 import AboutSection from "../components/AboutSection"
 import Branding from "../components/Branding"
-import NavigationBar from "../components/NavigationBar"
 import Projek from "../components/Projek"
 import Skill from "../components/Skill"
 import Form from "../components/Form"
-import Footer from "../components/Footer"
 import { useContext } from "react"
 import { CardContext } from "../Hooks/CardContext"
+import imageportofolio from '../assets/portofolioweb.png'
 
 const Home = () => {
   
   const card = useContext(CardContext)
   const cardArray1 = [
-    card('PORTOFOLIO WEB', "fade-left",'SEE','/src/image/portofolioweb.png'),
+    card('PORTOFOLIO WEB', "fade-left",'SEE', imageportofolio),
     card('',"fade-down")
   ]
   const cardArray2 = [

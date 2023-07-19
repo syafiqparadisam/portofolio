@@ -3,6 +3,8 @@ import { BsGithub, BsInstagram, BsTiktok, BsYoutube } from "react-icons/bs"
 import AOS from "aos"
 import { Link } from 'react-router-dom'
 import 'aos/dist/aos.css'
+import image3 from '../assets/3.jpg'
+import Profileku from "../assets/profileku.jpg"
 import { useEffect } from 'react'
 
 const Branding = () => {
@@ -23,7 +25,7 @@ const Branding = () => {
    h="100vh" 
    justifyContent="space-around" 
    alignItems="center"
-   backgroundImage="url(./src/image/3.jpg)"
+   backgroundImage={image3}
    backgroundAttachment={'fixed'}
    backgroundSize={'cover'}
    backgroundPosition={'center'}
@@ -74,9 +76,9 @@ const Branding = () => {
             data-aos="fade-down-left"
             color={'white'}
             fontFamily={'serif'}
-            >Hello I'M Syafiq
+            >Hello I&rsquo;M Syafiq
             <br/>
-            I'M Frontend Web Developer</Heading>
+            I&rsquo;M Frontend Web Developer</Heading>
             <Text
             my="25px"
             fontSize={{base: 'md', md: '2xl'}}
@@ -99,7 +101,7 @@ const Branding = () => {
     </Flex>
     <Box data-aos="fade-left" w={{base: '', md: '50%'}} display={{base: 'none', md: 'block'}}>
         <Image 
-        src="/src/image/profileku.jpg"
+        src={Profileku}
         borderRadius="30px"
         border={'2px solid white'}
         width={'300px'}

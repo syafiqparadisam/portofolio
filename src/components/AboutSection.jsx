@@ -4,6 +4,8 @@ import { BsListCheck } from "react-icons/bs"
 import { RiTeamFill } from "react-icons/ri"
 import AOS from "aos"
 import 'aos/dist/aos.css'
+import image2 from "../assets/2.jpg"
+import Profileku from "../assets/profileku.jpg"
 import { useEffect } from 'react'
 
 const AboutSection = () => {
@@ -22,7 +24,7 @@ const AboutSection = () => {
     width="100%"
     height="100%"
     flexDirection="column"
-    bgImg="url(./src/image/2.jpg)"
+    bgImg={image2}
     backgroundAttachment={'fixed'}
     backgroundSize={'cover'}
     backgroundPosition={'center'}
@@ -55,7 +57,7 @@ const AboutSection = () => {
         >
             <Box w="50%" p={{base: '5px', md: '20px'}} data-aos="fade-up-right">
                 <Image
-                src="/src/image/profileku.jpg"
+                src={Profileku}
                 w={{base: '140px', md: '300px'}}
                 borderRadius="20px"
                 border={'2px solid white'}
