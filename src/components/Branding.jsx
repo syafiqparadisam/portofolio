@@ -88,7 +88,7 @@ const Branding = () => {
             <br/>I Will Make Your Better Website
             </Text>
             <Link
-            to="/service"
+            to="/portofolio/service"
             style={{
                 backgroundColor: "black",
                 color: "white",

@@ -10,7 +10,7 @@ const Footer = () => {
     window.scrollTo({
         top: Top,
         left: 0,
-        scrollBehavior: 'smooth'
+        behavior: 'smooth'
     })
   }  
 
@@ -20,7 +20,7 @@ const Footer = () => {
     as="footer"
     flexDirection={'column'}
     >   
-        <Grid py="20px" justifyContent={'center'} templateColumns={{base: 'repeat(3, 70px)',sm: 'repeat(3, 1fr)'}} templateRows={{base: '1fr, 1fr', sm: '1fr'}} w={'100vw'}>
+        <Grid py="20px" justifyContent={'center'} templateColumns={{base: 'repeat(3, 105px)',sm: 'repeat(3, 1fr)'}} templateRows={{base: '1fr, 1fr', sm: '1fr'}} w={'100vw'}>
             <GridItem textAlign="center" colStart={1} rowStart={1}>
                 <Box pb="15px">
                     <Text color="white" fontWeight="bold" fontSize={{base: 'sm', md: '20px'}}>Contact us</Text>

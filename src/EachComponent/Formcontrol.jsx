@@ -73,9 +73,9 @@ return (
                     </Box>
                     <Flex justifyContent="space-evenly" alignItems="center" py="10px" my="10px" w="45%" mx="auto">
                         <Link href="https://github.com/syafiqparadisam"><BsGithub size="25px"/></Link>
-                        <Link href="https://www.instagram.com/syafiqparadisam/?igshid=ZGUzMzM3NWJiOQ=="><BsInstagram size="25px" color="red"/></Link>
+                        <Link mx={2} href="https://www.instagram.com/syafiqparadisam/?igshid=ZGUzMzM3NWJiOQ=="><BsInstagram size="25px" color="red"/></Link>
                         <Link href="https://www.tiktok.com/@fikkzketchee?lang=id-ID"><BsTiktok size="25px"/></Link>
-                        <Link href="https://www.youtube.com/channel/UCkGkoStRD4GENfhJdbgPJmg"><BsYoutube size="25px" color="red"/></Link>
+                        <Link mx={2} href="https://www.youtube.com/channel/UCkGkoStRD4GENfhJdbgPJmg"><BsYoutube size="25px" color="red"/></Link>
                     </Flex>
                 </FormControl>
                 </GridItem>

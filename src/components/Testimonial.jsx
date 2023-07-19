@@ -14,6 +14,7 @@ const Testimonial = () => {
     bgPos={'center'}
     bgImage={image5}
     bgSize={'cover'}
+    pb={10}
     >
         <Box w={'100%'} mx={'auto'} py={'10px'} my={'8'}>
             <Heading textAlign={'center'} color={'white'} fontFamily={'serif'}>My Client</Heading>

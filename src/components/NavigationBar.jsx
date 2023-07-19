@@ -21,6 +21,8 @@ const NavigationBar = () => {
     }
   }
 
+  
+
   return (
     <Flex 
     as="header" 
@@ -65,9 +67,9 @@ const NavigationBar = () => {
             <HiOutlineViewList className="menubarsvg" color="white" onClick={() => setDropdown(true)} size={'35px'} />
           </Flex>
         </Show>
-        { dropdown ? 
+        { dropdown && 
           <Hide above="md">
-              <Flex className="sidebar" position={'absolute'} top={0} right={0} w={'60vw'} height={'100vh'} bg={'black'} flexDir={'column'}>
+              <Flex transition={'all 1s ease-in-out'} transform={'100px'} className="sidebar" position={'absolute'} top={0} right={0} w={'60vw'} height={'100vh'} bg={'black'} flexDir={'column'}>
                 <Flex w={'100%'} justifyContent={'space-between'} p={'10px'} alignItems={'center'}>
                   <Heading as={'h4'} size={'md'} color={'white'} ml={'5px'} fontFamily={"serif"}>Mr_Syafiq</Heading>
                   <Text><AiOutlineClose size="25px" color="white" onClick={() => {
@@ -95,7 +97,7 @@ const NavigationBar = () => {
               
               
           </Hide>
-        : '' }
+         }
         
     </Flex>
   )
