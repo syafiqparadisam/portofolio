@@ -11,7 +11,7 @@ const SeeMyPortofolio = () => {
 			}}
 		>
 			<div
-				className="w-4/5 mx-autotext-center flex flex-col items-center"
+				className="w-4/5 mx-auto text-center flex flex-col items-center"
 				data-aos="fade-left"
 			>
 				<div className="font-bold text-2xl">

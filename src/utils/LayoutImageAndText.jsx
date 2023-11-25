@@ -10,7 +10,6 @@ const LayoutImageAndText = ({
 	alt,
 	color
 }) => {
-	console.log(window.innerWidth);
 	return (
 		<section
 			id="myproject"
@@ -66,7 +65,7 @@ const LayoutImageAndText = ({
 				>
 					<div className="minilaptop:text-left lg:block hidden justify-between items-center text-center minilaptop:w-3/5 w-full mx-auto font-medium lg:mb-0 tablet:mb-5 mb-10">
 						<p
-							className={`minilaptop:ml-10 minilaptop:text-lg ${color ? color : "text-black"} hp:text-sm text-xs`}
+							className={`minilaptop:mr-10 minilaptop:text-lg ${color ? color : "text-black"} hp:text-sm text-xs`}
 							data-aos="fade-right"
 						>
 							{description}

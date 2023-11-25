@@ -4,7 +4,8 @@ import { BsGithub, BsInstagram, BsTiktok, BsLinkedin } from "react-icons/bs";
 const Contact = () => {
 	return (
 		<div
-			className="flex w-full h-full flex-col py-10"
+			className="flex w-full h-full flex-col py-10 relative"
+			id="contact"
 			style={{
 				backgroundImage:
 					"radial-gradient(circle,#7800b2, #7300aa, #6d00a2, #68009a, #630080)",
@@ -39,13 +40,16 @@ const Contact = () => {
 								className="mx-2"
 								href="https://www.instagram.com/syafiqparadisam/?igshid=ZGUzMzM3NWJiOQ=="
 							>
-								<BsInstagram size="30px" />
+								<BsInstagram size="30px" color="red" />
 							</a>
 							<a href="https://www.tiktok.com/@fikkzketchee?lang=id-ID">
-								<BsTiktok size="30px" />
+								<BsTiktok size="30px" color="black" />
 							</a>
-							<a className="mx-2" href="">
-								<BsLinkedin size="30px" />
+							<a
+								className="mx-2"
+								href="https://www.linkedin.com/in/syafiq-paradisam-b72749258"
+							>
+								<BsLinkedin color="blue" size="30px" />
 							</a>
 						</div>
 					</div>

@@ -10,6 +10,7 @@ import {
 } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
 import { SlMenu } from "react-icons/sl";
+import "../index.css"
 
 const NavigationBar = () => {
 	const [dropdown, setDropDown] = useState(false);
@@ -19,16 +20,14 @@ const NavigationBar = () => {
 	useEffect(() => {
 		if (hamburgerMenu && window.innerWidth >= 700) {
 			setTransition("minilaptop:translate-x-0 translate-x-[1000px] w-full");
-			console.log("hai ini true");
 		}
 		
 		if (!hamburgerMenu) {
 			setTransition("minilaptop:translate-x-0 translate-x-[1000px] w-full");
-			console.log("hai ini false");
 		}
+		
 	}, [hamburgerMenu, transition]);
 	useEffect(() => {
-		console.log("Terender");
 		setTransition("minilaptop:translate-x-0 translate-x-[1000px] w-full hidden");
 		if (hamburgerMenu && window.innerWidth <= 700) {
 			setHamburgerMenu(false);
@@ -77,10 +76,12 @@ const NavigationBar = () => {
 			<div
 				className={`flex minilaptop:pl-0 minilaptop:static z-50 absolute justify-start w-full items-start flex-col minilaptop:flex-row `}
 			>
+				
 				<ol
-					className={`flex items-center transition-transform duration-200 ease-in-out  font-semibold minilaptop:bg-transparent bg-purple-300 minilaptop:rounded-none rounded-md minilaptop:gap-0 ${transition} minilaptop:static absolute top-8 flex-col minilaptop:flex-row `}
+					className={`flex linkWrapper items-center transition-transform duration-200 ease-in-out  font-semibold minilaptop:bg-none bg-primary minilaptop:rounded-none rounded-sm minilaptop:gap-0 ${transition} minilaptop:static absolute top-8 flex-col minilaptop:flex-row `}
+					id="linkWrapper"
 				>
-					<li className="text-purple-900 minilaptop:text-white minilaptop:hidden flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
+					<li className="text-white minilaptop:text-white minilaptop:hidden flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
 						<Link
 							to="/"
 							className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
@@ -89,7 +90,7 @@ const NavigationBar = () => {
 							Home
 						</Link>
 					</li>
-					<li className="text-purple-900 minilaptop:text-white flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
+					<li className="text-white minilaptop:text-white flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
 						<Link
 							to="/project"
 							className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
@@ -99,7 +100,7 @@ const NavigationBar = () => {
 						</Link>
 					</li>
 
-					<li className="text-purple-900 minilaptop:text-white rounded-md minilaptop:text-center flex minilaptop:w-28 w-full text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
+					<li className="text-white minilaptop:text-white rounded-md minilaptop:text-center flex minilaptop:w-28 w-full text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
 						<Link
 							to="/contact"
 							className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
@@ -108,7 +109,7 @@ const NavigationBar = () => {
 							Contact
 						</Link>
 					</li>
-					<li className="text-purple-900 minilaptop:text-white flex rounded-md minilaptop:text-center minilaptop:w-28 w-full text-left font-medium  hover:bg-purple-500 hover:text-white hover:transition-colors">
+					<li className="text-white minilaptop:text-white flex rounded-md minilaptop:text-center minilaptop:w-28 w-full text-left font-medium  hover:bg-purple-500 hover:text-white hover:transition-colors">
 						<Link
 							to="/services"
 							className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
@@ -126,7 +127,7 @@ const NavigationBar = () => {
 							setDropDown(false);
 							setArrow("rotate-0 transition ease-in-out duration-100");
 						}}
-						className="relative minilaptop:text-white minilaptop:justify-center justify-start minilaptop:w-fit w-full flex minilaptop:text-center text-left text-purple-900 text-lg rounded-md py-2 minilaptop:px-3 font-medium hover:bg-purple-500 hover:text-white hover:transition-all items-center pl-6"
+						className="relative minilaptop:text-white minilaptop:justify-center justify-start minilaptop:w-fit w-full flex minilaptop:text-center text-left text-white text-lg rounded-md py-2 minilaptop:px-3 font-medium hover:bg-purple-500 hover:text-white hover:transition-all items-center pl-6"
 					>
 						Others
 						<RiArrowDropDownLine size={"30px"} className={arrow} />
@@ -193,7 +194,7 @@ const NavigationBar = () => {
 							<div className="flex w-full items-center justify-start h-full rounded-md hover:bg-purple-500 hover:text-white ">
 								<Link
 									to={"/HowToOrder/"}
-									className="font-semibold w-full text-sm text-purple-900 pl-10 text-left py-3 "
+									className="font-semibold w-full text-sm text-white pl-10 text-left py-3 "
 									onClick={() => setHamburgerMenu(false)}
 								>
 									Instruction
@@ -202,7 +203,7 @@ const NavigationBar = () => {
 							<div className="flex w-full items-center justify-start h-full rounded-md hover:bg-purple-500 hover:text-white">
 								<Link
 									to={"/testimoni"}
-									className="font-semibold w-full text-sm text-purple-900 pl-10 text-left py-3 "
+									className="font-semibold w-full text-sm text-white pl-10 text-left py-3 "
 									onClick={() => setHamburgerMenu(false)}
 								>
 									Testimoni
@@ -211,7 +212,7 @@ const NavigationBar = () => {
 							<div className="flex w-full items-center justify-start h-full rounded-md hover:bg-purple-500 hover:text-white">
 								<Link
 									to={"/achievement"}
-									className="font-semibold w-full text-sm text-purple-900 pl-10 text-left py-3 "
+									className="font-semibold w-full text-sm text-white pl-10 text-left py-3 "
 									onClick={() => setHamburgerMenu(false)}
 								>
 									Achievement

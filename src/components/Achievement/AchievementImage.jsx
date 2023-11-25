@@ -13,7 +13,7 @@ const AchievementImage = ({ src, title }) => {
 		<>
 			<img
 				src={src}
-				className="rounded-md border max-w-[300px] w-full border-white hover:scale-105 transition ease-in-out duration-300"
+				className="rounded-md border max-w-[300px] min-w-[200px] w-full border-white hover:scale-105 transition ease-in-out duration-300"
 				onClick={() => setModalBox(true)}
 				data-aos="zoom-in"
 			/>

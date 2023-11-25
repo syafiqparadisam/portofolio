@@ -1,24 +1,24 @@
 import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
-import { BsGithub, BsInstagram, BsTiktok, BsYoutube } from "react-icons/bs";
+import { BsGithub, BsInstagram, BsTiktok, BsLinkedin } from "react-icons/bs";
 import programmerIlustration from "/src/assets/ilustrasiprogrammer-removebg-preview.png";
 import BrandingSosmed from "./BrandingSosmed";
 
 const Branding = () => {
 	return (
 		<main
-			className="h-screen justify-around items-center flex text-white"
+			className="h-screen lg:justify-around justify-center w-full items-center flex text-white"
 			style={{
 				backgroundImage:
 					"radial-gradient(circle, #7800b2, #7300aa, #6d00a2, #68009b, #630093)",
 			}}
 		>
 			<div
-				className="w-full items-center justify-start flex"
+				className="w-full items-center lg:justify-start justify-center flex"
 				data-aos="fade-right"
 			>
-				<div className="minilaptop:m-20 hp:m-10 m-5 minilaptop:p-4">
-					<ol>
+				<div className="minilaptop:m-20 :hpm-10 m-5 minilaptop:p-4">
+					<ol className="minilaptop:mb-0 hp:mb-1 mb-3">
 						<BrandingSosmed
 							icon={
 								<BsInstagram
@@ -32,30 +32,34 @@ const Branding = () => {
 							animate={"fade-right"}
 						/>
 						<BrandingSosmed
-							icon={<BsGithub className="text-2xl minilaptop:text-3xl" />}
-							className={""}
+							icon={
+								<BsGithub
+									color="black"
+									className="text-2xl minilaptop:text-3xl"
+								/>
+							}
 							link={"https://github.com/syafiqparadisam"}
 							animate={"fade-up"}
 						/>
 						<BrandingSosmed
 							icon={
+								<BsLinkedin
+									color="blue"
+									className="text-2xl minilaptop:text-3xl"
+								/>
+							}
+							link={"https://www.linkedin.com/in/syafiq-paradisam-b72749258"}
+							animate={"fade-up"}
+						/>
+						<BrandingSosmed
+							icon={
 								<BsTiktok
-									color="darkBlue"
+									color="black"
 									className="text-2xl minilaptop:text-3xl"
 								/>
 							}
 							link={"https://www.tiktok.com/@fikkzketchee?lang=id-ID"}
 							animate={"fade-right"}
-						/>
-						<BrandingSosmed
-							icon={
-								<BsYoutube
-									color="red"
-									className="text-2xl minilaptop:text-3xl"
-								/>
-							}
-							link={"https://www.youtube.com/channel/UCkGkoStRD4GENfhJdbgPJmg"}
-							animate={"fade-up"}
 						/>
 					</ol>
 				</div>

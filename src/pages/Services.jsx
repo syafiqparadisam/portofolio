@@ -37,7 +37,7 @@ const Services = () => {
 			/>
 			<section
 				id="services"
-				className="flex flex-wrap gap-5 justify-around py-7 bg-purple-100"
+				className="flex flex-wrap gap-5 lg:justify-around justify-center py-7 bg-purple-100"
 			>
 				<TechService
 					title={"React Developer"}

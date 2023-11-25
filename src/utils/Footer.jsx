@@ -10,11 +10,11 @@ import { BiCopyright } from "react-icons/bi";
 import { TbClockBolt } from 'react-icons/tb';
 
 const Footer = () => {
-	const goto = (Top) => {
+	const goto = () => {
 		window.scrollTo({
-			top: Top,
+			top: 0,
 			left: 0,
-			behavior: "smooth",
+			behavior: "smooth"
 		});
 	};
 
@@ -23,35 +23,49 @@ const Footer = () => {
 			<div className="flex justify-around w-full h-full items-center tablet:items-start pb-8 tablet:px-0 px-2 uppercase flex-wrap tablet:gap-0 gap-10">
 				<div className="flex leading-7 text-left flex-col items-start tablet:justify-start">
 					<h1 className="font-bold text-lg mb-2">Menu</h1>
-					<Link to={"/"}>Home</Link>
-					<Link to={"/project"}>Projects</Link>
-					<Link to={"/testimoni"}>Testimoni</Link>
-					<Link to={"/contact"}>Contact</Link>
-					<Link to={"/services"}>Services</Link>
-					<Link to={"/howToOrder"}>Instruction</Link>
-					<Link to={"/achievement"}>Achievement</Link>
+					<Link to={"/"} onClick={goto}>
+						Home
+					</Link>
+					<Link to={"/project"} onClick={goto}>
+						Projects
+					</Link>
+					<Link to={"/testimoni"} onClick={goto}>
+						Testimoni
+					</Link>
+					<Link to={"/contact"} onClick={goto}>
+						Contact
+					</Link>
+					<Link to={"/services"} onClick={goto}>
+						Services
+					</Link>
+					<Link to={"/howToOrder"} onClick={goto}>
+						Instruction
+					</Link>
+					<Link to={"/achievement"} onClick={goto}>
+						Achievement
+					</Link>
 				</div>
 				<div className="flex leading-7 text-left flex-col items-start tablet:justify-start">
 					<h1 className="font-bold text-lg mb-2">Services</h1>
-					<Link to={"/services"}>
+					<Link to={"/services"} onClick={goto}>
 						<p>Web develop</p>
 					</Link>
-					<Link to={"/services"}>
+					<Link to={"/services"} onClick={goto}>
 						<p>Refactor code</p>
 					</Link>
-					<Link to={"/services"}>
+					<Link to={"/services"} onClick={goto}>
 						<p>React Developer</p>
 					</Link>
-					<Link to={"/services"}>
+					<Link to={"/services"} onClick={goto}>
 						<p>Nodejs Developer</p>
 					</Link>
-					<Link to={"/services"}>
+					<Link to={"/services"} onClick={goto}>
 						<p>Golang Developer</p>
 					</Link>
 				</div>
 				<div className="flex flex-col leading-7 text-left items-start tablet:justify-start">
 					<h1 className="font-bold text-lg mb-2">About Us</h1>
-					<Link to={""}>
+					<Link to={""} onClick={goto}>
 						<p>EXPERIENCE</p>
 					</Link>
 
@@ -64,7 +78,9 @@ const Footer = () => {
 				</div>
 				<div className="flex leading-7 tablet:text-left flex-col text-center items-start tablet:justify-start">
 					<h1 className="font-bold text-lg mb-2">Achievement</h1>
-					<Link to={"/achievement"}><p>DICODING</p></Link>
+					<Link to={"/achievement"} onClick={goto}>
+						<p>DICODING</p>
+					</Link>
 					<p>FREECODECAMP</p>
 					<p>LEETCODE</p>
 					<p>W3SCHOOLS</p>
@@ -88,7 +104,7 @@ const Footer = () => {
 							<BsGithub size={"25px"} />
 						</div>
 					</a>
-					<a href="">
+					<a href="https://www.linkedin.com/in/syafiq-paradisam-b72749258">
 						<div className="rounded-full border-white border-2 border-solid p-2">
 							<BsLinkedin size={"25px"} style={{ backgroundColor: "none" }} />
 						</div>

@@ -1,22 +1,22 @@
-import { useRef, useState } from "react";
-import { BsGithub, BsInstagram, BsTiktok, BsYoutube } from "react-icons/bs";
+import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
+import { useLoadingStore } from "../../store/store";
 
 const Formcontrol = () => {
-	const [progress, setProgress] = useState(false);
+	const setLoading = useLoadingStore((state) => state.setIsLoading);
+	const loading = useLoadingStore((state) => state.loading);
 	const form = useRef();
+
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
+		reset
 	} = useForm();
 	const name = useRef();
-	let loading;
 	const sendEmail = (data) => {
-		setProgress(true);
-		console.log(data);
-
+		setLoading(true);
 		emailjs
 			.sendForm(
 				import.meta.env.VITE_SERVICE_ID,
@@ -27,8 +27,8 @@ const Formcontrol = () => {
 			.then(
 				(result) => {
 					if (result.status === 200) {
-						console.log("Berhasil");
-						setProgress(false);
+						setLoading(false);
+						reset()
 					}
 				},
 				(error) => {
@@ -39,7 +39,6 @@ const Formcontrol = () => {
 
 	return (
 		<>
-			{progress == true && <p>Loading...</p>}
 			<form
 				ref={form}
 				onSubmit={handleSubmit(sendEmail)}
@@ -72,7 +71,6 @@ const Formcontrol = () => {
 					<input
 						id="email"
 						type="email"
-						name="ema"
 						{...register("email", {
 							minLength: 2,
 							required: true,
@@ -85,8 +83,7 @@ const Formcontrol = () => {
 						{errors.email?.type === "required" && "Please Enter Your Email"}
 						{errors.email?.type === "minLength" &&
 							"Email must be at least 2 characters long"}
-						{errors.email?.type === "pattern" &&
-							"Please Enter a valid email"}
+						{errors.email?.type === "pattern" && "Please Enter a valid email"}
 					</p>
 				</div>
 
@@ -116,7 +113,7 @@ const Formcontrol = () => {
 				<div className="text-right mt-2">
 					<button
 						type="submit"
-						disabled={progress ? true : false}
+						disabled={loading ? true : false}
 						className="rounded-md bg-gray-200 text-purple-900 py-2 px-8 shadow-xl font-bold text-md"
 					>
 						Send
