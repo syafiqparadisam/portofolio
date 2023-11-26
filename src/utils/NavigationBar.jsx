@@ -1,34 +1,41 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import {
-	BsGithub,
-	BsTiktok,
-	BsInstagram,
-	BsLinkedin,
-	BsMenuDown,
-} from "react-icons/bs";
+import { BsGithub, BsInstagram } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
 import { SlMenu } from "react-icons/sl";
-import "../index.css"
+import "../index.css";
 
 const NavigationBar = () => {
 	const [dropdown, setDropDown] = useState(false);
 	const [hamburgerMenu, setHamburgerMenu] = useState(false);
 	const [transition, setTransition] = useState("");
 	const [arrow, setArrow] = useState();
+
+	window.document.body.onclick = (e) => {
+		if (
+			!e.target.classList.contains("sidebar") &&
+			!e.target.classList.contains("menubar") &&
+			!e.target.classList.contains("menubarsvg")
+		) {
+			setHamburgerMenu(false);
+		}
+		return;
+	};
+
 	useEffect(() => {
 		if (hamburgerMenu && window.innerWidth >= 700) {
 			setTransition("minilaptop:translate-x-0 translate-x-[1000px] w-full");
 		}
-		
+
 		if (!hamburgerMenu) {
 			setTransition("minilaptop:translate-x-0 translate-x-[1000px] w-full");
 		}
-		
 	}, [hamburgerMenu, transition]);
 	useEffect(() => {
-		setTransition("minilaptop:translate-x-0 translate-x-[1000px] w-full hidden");
+		setTransition(
+			"minilaptop:translate-x-0 translate-x-[1000px] w-full hidden"
+		);
 		if (hamburgerMenu && window.innerWidth <= 700) {
 			setHamburgerMenu(false);
 		}
@@ -52,7 +59,7 @@ const NavigationBar = () => {
 				</Link>
 				{/* HAMBURGER MENU */}
 				<button
-					className="minilaptop:hidden block hover:bg-purple-400 p-3 rounded-lg"
+					className="minilaptop:hidden block hover:bg-purple-500 p-3 rounded-lg menubar"
 					onClick={() => {
 						setHamburgerMenu((v) => !v);
 						if (hamburgerMenu) {
@@ -67,6 +74,7 @@ const NavigationBar = () => {
 					}}
 				>
 					<SlMenu
+						className="menubarsvg"
 						color="white"
 						size={"25px"}
 						style={{ fontWeight: "bolder" }}
@@ -76,10 +84,8 @@ const NavigationBar = () => {
 			<div
 				className={`flex minilaptop:pl-0 minilaptop:static z-50 absolute justify-start w-full items-start flex-col minilaptop:flex-row `}
 			>
-				
 				<ol
-					className={`flex linkWrapper items-center transition-transform duration-200 ease-in-out  font-semibold minilaptop:bg-none bg-primary minilaptop:rounded-none rounded-sm minilaptop:gap-0 ${transition} minilaptop:static absolute top-8 flex-col minilaptop:flex-row `}
-					id="linkWrapper"
+					className={`flex sidebar items-center transition-transform duration-200 ease-in-out  font-semibold minilaptop:bg-none bg-primary minilaptop:rounded-none rounded-sm minilaptop:gap-0 ${transition} minilaptop:static absolute top-8 flex-col minilaptop:flex-row `}
 				>
 					<li className="text-white minilaptop:text-white minilaptop:hidden flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
 						<Link

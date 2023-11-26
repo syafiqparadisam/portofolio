@@ -1,7 +1,7 @@
-import { BsCheck } from "react-icons/bs";
 import {
 	SiAstro,
 	SiChakraui,
+	SiDocker,
 	SiGit,
 	SiGithub,
 	SiMongoose,
@@ -12,7 +12,6 @@ import {
 	SiReactrouter,
 	SiRedis,
 	SiUbuntu,
-	SiYaml,
 } from "react-icons/si";
 import {
 	BiLogoTailwindCss,
@@ -50,6 +49,7 @@ const Services = () => {
 							<SiReact size={"40px"} color="red" />
 						</>
 					}
+					description="I will build frontend with react if it's too many CSR"
 				/>
 				<TechService
 					title={"Frontend Developer"}
@@ -63,6 +63,7 @@ const Services = () => {
 							<SiChakraui size={"40px"} color="skyBlue" />
 						</>
 					}
+					description="I also can build website with no javascript framework"
 				/>
 				<TechService
 					title={"Backend Developer"}
@@ -76,6 +77,7 @@ const Services = () => {
 							<BiLogoGoLang size={"40px"} color="skyBlue" />
 						</>
 					}
+					description="i will build your backend system with nodejs or golang"
 				/>
 				<TechService
 					title={"Database"}
@@ -86,6 +88,7 @@ const Services = () => {
 							<SiRedis size={"40px"} color="red" />
 						</>
 					}
+					description="I also knowing the database type such as SQL or NoSQL, and etc"
 				/>
 				<TechService
 					title={"SSR and SSG"}
@@ -95,6 +98,7 @@ const Services = () => {
 							<SiAstro size={"40px"} color="red" />
 						</>
 					}
+					description="I also can build frontend app with Astrojs or Nextjs"
 				/>
 				<TechService
 					title={"Others"}
@@ -103,8 +107,10 @@ const Services = () => {
 							<SiGit size={"40px"} color="red" />
 							<SiGithub size={"40px"} />
 							<SiUbuntu size={"40px"} color="red" />
+							<SiDocker color="blue" size={"45px"}/>
 						</>
 					}
+					description="I also knowing VCS, docker and System Operation"
 				/>
 			</section>
 		</div>
