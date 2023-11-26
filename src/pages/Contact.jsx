@@ -4,7 +4,7 @@ import { BsGithub, BsInstagram, BsTiktok, BsLinkedin } from "react-icons/bs";
 const Contact = () => {
 	return (
 		<div
-			className="flex w-full h-full flex-col py-10 relative"
+			className="flex w-full h-full flex-col py-10"
 			id="contact"
 			style={{
 				backgroundImage:
