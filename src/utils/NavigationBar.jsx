@@ -9,16 +9,23 @@ import "../index.css";
 const NavigationBar = () => {
 	const [dropdown, setDropDown] = useState(false);
 	const [hamburgerMenu, setHamburgerMenu] = useState(false);
-	const [transition, setTransition] = useState("");
+	const [transition, setTransition] = useState(
+		"minilaptop:translate-x-0 translate-x-[1000px] w-full"
+	);
 	const [arrow, setArrow] = useState();
 
 	window.document.body.onclick = (e) => {
+		if (e.target.classList.contains("others")) {
+			setTransition("minilaptop:translate-x-0 translate-x-[0px] w-full");
+		}
 		if (
 			!e.target.classList.contains("sidebar") &&
 			!e.target.classList.contains("menubar") &&
-			!e.target.classList.contains("menubarsvg")
+			!e.target.classList.contains("menubarsvg") &&
+			!e.target.classList.contains("others")
 		) {
 			setHamburgerMenu(false);
+			setTransition("minilaptop:translate-x-0 translate-x-[1000px] w-full");
 		}
 		return;
 	};
@@ -27,20 +34,10 @@ const NavigationBar = () => {
 		if (hamburgerMenu && window.innerWidth >= 700) {
 			setTransition("minilaptop:translate-x-0 translate-x-[1000px] w-full");
 		}
-
-		if (!hamburgerMenu) {
-			setTransition("minilaptop:translate-x-0 translate-x-[1000px] w-full");
-		}
-	}, [hamburgerMenu, transition]);
-	useEffect(() => {
-		setTransition(
-			"minilaptop:translate-x-0 translate-x-[1000px] w-full hidden"
-		);
-		if (hamburgerMenu && window.innerWidth <= 700) {
+		if (window.innerWidth >= 700) {
 			setHamburgerMenu(false);
 		}
-	}, []);
-
+	});
 	return (
 		<nav
 			className={`w-full flex items-center flex-row shadow-4xl minilaptop:sticky relative`}
@@ -85,13 +82,12 @@ const NavigationBar = () => {
 				className={`flex minilaptop:pl-0 minilaptop:static z-50 absolute justify-start w-full items-start flex-col minilaptop:flex-row `}
 			>
 				<ol
-					className={`flex sidebar items-center transition-transform duration-200 ease-in-out  font-semibold minilaptop:bg-none bg-primary minilaptop:rounded-none rounded-sm minilaptop:gap-0 ${transition} minilaptop:static absolute top-8 flex-col minilaptop:flex-row `}
+					className={`flex items-center others transition-transform duration-200 ease-in-out  font-semibold minilaptop:bg-none bg-primary minilaptop:rounded-none rounded-sm minilaptop:gap-0 ${transition} minilaptop:static absolute top-8 flex-col minilaptop:flex-row `}
 				>
 					<li className="text-white minilaptop:text-white minilaptop:hidden flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
 						<Link
 							to="/"
 							className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
-							onClick={() => setHamburgerMenu(false)}
 						>
 							Home
 						</Link>
@@ -100,7 +96,6 @@ const NavigationBar = () => {
 						<Link
 							to="/project"
 							className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
-							onClick={() => setHamburgerMenu(false)}
 						>
 							Project
 						</Link>
@@ -110,7 +105,6 @@ const NavigationBar = () => {
 						<Link
 							to="/contact"
 							className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
-							onClick={() => setHamburgerMenu(false)}
 						>
 							Contact
 						</Link>
@@ -119,12 +113,17 @@ const NavigationBar = () => {
 						<Link
 							to="/services"
 							className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
-							onClick={() => setHamburgerMenu(false)}
 						>
 							Services
 						</Link>
 					</li>
 					<li
+						onClick={() => {
+							setTransition(
+								"minilaptop:translate-x-0 translate-x-[0px] w-full"
+							);
+							setDropDown(true);
+						}}
 						onMouseOver={() => {
 							setDropDown(true);
 							setArrow("rotate-180 transition ease-in-out duration-100");
@@ -133,55 +132,54 @@ const NavigationBar = () => {
 							setDropDown(false);
 							setArrow("rotate-0 transition ease-in-out duration-100");
 						}}
-						className="relative minilaptop:text-white minilaptop:justify-center justify-start minilaptop:w-fit w-full flex minilaptop:text-center text-left text-white text-lg rounded-md py-2 minilaptop:px-3 font-medium hover:bg-purple-500 hover:text-white hover:transition-all items-center pl-6"
+						className="relative others minilaptop:text-white minilaptop:justify-center justify-start minilaptop:w-fit w-full flex minilaptop:text-center text-left text-white text-lg rounded-md py-2 minilaptop:px-3 font-medium hover:bg-purple-500 hover:text-white hover:transition-all items-center pl-6"
 					>
 						Others
-						<RiArrowDropDownLine size={"30px"} className={arrow} />
-						{dropdown &&
-							hamburgerMenu === false &&
-							window.innerWidth >= 700 && (
-								<>
-									<div
-										onMouseOver={() => {
-											setDropDown(true);
-											setArrow(
-												"rotate-180 transition ease-in-out duration-100"
-											);
-										}}
-										onMouseOut={() => {
-											setDropDown(false);
-											setArrow("rotate-0 transition ease-in-out duration-100");
-										}}
-										className="text-black w-44 minilaptop:absolute flex flex-col rounded-md bg-purple-800 shadow-xl"
-										style={{
-											top: "46px",
-											left: "0%",
-										}}
-									>
-										{/* For Large Device */}
-										<div className="minilaptop:flex hidden flex-col w-full h-full justify-center items-start">
-											<Link
-												to={"/HowToOrder/"}
-												className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-t-md px-2 hover:bg-purple-300 w-full py-3 h-full"
-											>
-												<div>Instruction</div>
-											</Link>
-											<Link
-												to={"/testimoni"}
-												className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-md px-2 hover:bg-purple-300 w-full py-3 h-full"
-											>
-												<div>Testimoni</div>
-											</Link>
-											<Link
-												to={"/achievement"}
-												className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-b-md px-2 hover:bg-purple-300 w-full py-3 h-full"
-											>
-												<div>Achievement</div>
-											</Link>
-										</div>
+						<RiArrowDropDownLine
+							size={"30px"}
+							className={`${arrow} minilaptop:block hidden`}
+						/>
+						{dropdown && hamburgerMenu === false && (
+							<>
+								<div
+									onMouseOver={() => {
+										setDropDown(true);
+										setArrow("rotate-180 transition ease-in-out duration-100");
+									}}
+									onMouseOut={() => {
+										setDropDown(false);
+										setArrow("rotate-0 transition ease-in-out duration-100");
+									}}
+									className="text-black w-44 minilaptop:absolute flex flex-col rounded-md bg-purple-800 shadow-xl"
+									style={{
+										top: "46px",
+										left: "0%",
+									}}
+								>
+									{/* For Large Device */}
+									<div className="minilaptop:flex hidden flex-col w-full h-full justify-center items-start">
+										<Link
+											to={"/HowToOrder/"}
+											className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-t-md px-2 hover:bg-purple-300 w-full py-3 h-full"
+										>
+											<div>Instruction</div>
+										</Link>
+										<Link
+											to={"/testimoni"}
+											className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-md px-2 hover:bg-purple-300 w-full py-3 h-full"
+										>
+											<div>Testimoni</div>
+										</Link>
+										<Link
+											to={"/achievement"}
+											className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-b-md px-2 hover:bg-purple-300 w-full py-3 h-full"
+										>
+											<div>Achievement</div>
+										</Link>
 									</div>
-								</>
-							)}
+								</div>
+							</>
+						)}
 					</li>
 					{/* For Mini Device */}
 
@@ -201,7 +199,6 @@ const NavigationBar = () => {
 								<Link
 									to={"/HowToOrder/"}
 									className="font-semibold w-full text-sm text-white pl-10 text-left py-3 "
-									onClick={() => setHamburgerMenu(false)}
 								>
 									Instruction
 								</Link>
@@ -210,7 +207,6 @@ const NavigationBar = () => {
 								<Link
 									to={"/testimoni"}
 									className="font-semibold w-full text-sm text-white pl-10 text-left py-3 "
-									onClick={() => setHamburgerMenu(false)}
 								>
 									Testimoni
 								</Link>
@@ -219,7 +215,6 @@ const NavigationBar = () => {
 								<Link
 									to={"/achievement"}
 									className="font-semibold w-full text-sm text-white pl-10 text-left py-3 "
-									onClick={() => setHamburgerMenu(false)}
 								>
 									Achievement
 								</Link>
