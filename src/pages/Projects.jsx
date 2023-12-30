@@ -9,7 +9,7 @@ const Projects = () => {
 			className="w-full flex justify-center items-center flex-col h-full"
 		>
 			<Headers
-				title={"The My Project Gallery"}
+				title={"My Project Gallery"}
 				
 			/>
 			<ShowProject
