@@ -15,10 +15,10 @@ function App() {
         <NavigationBar />
         <CardContext.Provider value={card}>
           <Routes>
-            <Route path="/portofolio/" element={<Home />} />
-            <Route path="/portofolio/client" element={<Client />} />
-            <Route path="/portofolio/portofolio" element={<Portofolio />} />
-            <Route path="/portofolio/service" element={<Service />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/client" element={<Client />} />
+            <Route path="/portofolio" element={<Portofolio />} />
+            <Route path="/service" element={<Service />} />
           </Routes>
         </CardContext.Provider>
         <Footer />

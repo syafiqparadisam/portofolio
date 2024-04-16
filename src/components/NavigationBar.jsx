@@ -59,7 +59,7 @@ const NavigationBar = () => {
             borderRadius={"15px"}
             _hover={{ backgroundColor: "black" }}
           >
-            <Link to="/portofolio/">Home</Link>
+            <Link to="/">Home</Link>
           </ListItem>
           <ListItem
             color={"white"}
@@ -69,7 +69,7 @@ const NavigationBar = () => {
             borderRadius={"15px"}
             _hover={{ backgroundColor: "black" }}
           >
-            <Link to="/portofolio/client">Client</Link>
+            <Link to="/client">Client</Link>
           </ListItem>
           <ListItem
             color={"white"}
@@ -78,7 +78,7 @@ const NavigationBar = () => {
             borderRadius={"15px"}
             _hover={{ backgroundColor: "black" }}
           >
-            <Link to="/portofolio/portofolio">Portofolio</Link>
+            <Link to="/portofolio">Portofolio</Link>
           </ListItem>
         </List>
       </Hide>
@@ -137,7 +137,7 @@ const NavigationBar = () => {
               </Text>
             </Flex>
             <Link
-              to={"/portofolio/"}
+              to={"/"}
               style={{ width: "100%" }}
               onClick={() => setDropdown(false)}
             >
@@ -155,7 +155,7 @@ const NavigationBar = () => {
             </Link>
             <hr style={{ width: "75%", marginInline: 'auto'}} />
             <Link
-              to={"/portofolio/client"}
+              to={"/client"}
               style={{ width: "100%" }}
               onClick={() => setDropdown(false)}
             >
@@ -173,7 +173,7 @@ const NavigationBar = () => {
             </Link>
             <hr style={{ width: "75%", marginInline: 'auto'}} />
             <Link
-              to={"/portofolio/portofolio"}
+              to={"/portofolio"}
               style={{ width: "100%" }}
               onClick={() => setDropdown(false)}
             >
@@ -234,7 +234,7 @@ const NavigationBar = () => {
               </Text>
             </Flex>
             <Link
-              to={"/portofolio/"}
+              to={"/"}
               style={{ width: "100%" }}
               onClick={() => setDropdown(false)}
             >
@@ -252,7 +252,7 @@ const NavigationBar = () => {
             </Link>
             <hr style={{ width: "75%", marginInline: 'auto'}} />
             <Link
-              to={"/portofolio/client"}
+              to={"/client"}
               style={{ width: "100%" }}
               onClick={() => setDropdown(false)}
             >
@@ -270,7 +270,7 @@ const NavigationBar = () => {
             </Link>
             <hr style={{ width: "75%", marginInline: 'auto'}} />
             <Link
-              to={"/portofolio/portofolio"}
+              to={"/portofolio"}
               style={{ width: "100%" }}
               onClick={() => setDropdown(false)}
             >

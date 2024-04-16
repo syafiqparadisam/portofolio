@@ -6,24 +6,25 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build
+  ci:
+    name: CI
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16
-
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v1
+       
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: bun install
+
+      - name: Linting
+        run: bun run lint
 
       - name: Build project
-        run: npm run build
+        run: bun run build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
@@ -31,21 +32,21 @@ jobs:
           name: production-files
           path: ./dist
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+  # deploy:
+  #   name: Deploy
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   if: github.ref == 'refs/heads/main'
 
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: production-files
-          path: ./dist
+  #   steps:
+  #     - name: Download artifact
+  #       uses: actions/download-artifact@v2
+  #       with:
+  #         name: production-files
+  #         path: ./dist
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+  #     - name: Deploy to GitHub Pages
+  #       uses: peaceiris/actions-gh-pages@v3
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         publish_dir: ./dist

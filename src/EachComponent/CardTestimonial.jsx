@@ -55,7 +55,7 @@ const CardTestimonial = ({ name, icon, message, rating, animate }) => {
         <CardBody w={'100%'}>
           <Flex alignItems={'center'}>
             <Text fontWeight={500} mr={1} mb={1} display={{base: 'block', md: 'inline-block'}}>Rating : </Text>
-            { ...stars }
+            {stars}
           </Flex>
           <Card my={3} boxShadow={'xs'} w={'100%'} mx={'auto'}>
             <CardHeader>
@@ -68,6 +68,10 @@ const CardTestimonial = ({ name, icon, message, rating, animate }) => {
         </CardBody>
     </Card>
   )
+}
+
+CardTestimonial.propTypes = {
+  
 }
 
 export default CardTestimonial

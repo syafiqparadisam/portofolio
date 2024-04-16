@@ -17,7 +17,7 @@ const Formcontrol =() => {
         setProgress(true)
     
         emailjs.sendForm("service_gyicy3e", "template_fo97i6y", form.current, "Y5qSjyArYPDPZXVdM")
-          .then((result) => {
+          .then(() => {
               toast({
                   duration: 2000,
                   isClosable: true,

@@ -1,4 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react"
+import propTypes from "prop-types"
 
 const TechSkill = ({ icon, text }) => {
   return (
@@ -18,6 +19,11 @@ const TechSkill = ({ icon, text }) => {
     }
     </>
   )
+}
+
+TechSkill.propTypes = {
+  icon: propTypes.node.isRequired,
+  text: propTypes.string.isRequired
 }
 
 export default TechSkill
