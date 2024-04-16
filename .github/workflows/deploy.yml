@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - release/v1.0
+      - releases/v1.0
 
 jobs:
   ci:
