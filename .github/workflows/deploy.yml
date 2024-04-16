@@ -6,8 +6,8 @@ on:
       - releases/v1.0
 
 jobs:
-  ci:
-    name: CI
+  setup:
+    name: Setup bun
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,12 @@ jobs:
 
       - name: Install Bun
         uses: oven-sh/setup-bun@v1
-       
+  
+  setup-projek:
+    name: Setup project
+    runs-on: ubuntu-latest
+    
+    steps:
       - name: Install dependencies
         run: bun install
 
