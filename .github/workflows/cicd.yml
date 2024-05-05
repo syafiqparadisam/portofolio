@@ -52,4 +52,4 @@ jobs:
       - name: Build history service application, and deploy to dockerhub
         run: |
           docker build -t portofolio:${{secrets.DOCKER_TAGS_APP}} .
-          docker push portofolio:${{secrets.DOCKER_TAGS_APP}} ${{secrets.DOCKER_USERNAME}}
+          docker push ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_TAGS_APP}}
