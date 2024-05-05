@@ -49,7 +49,7 @@ jobs:
       - name: Login into docker hub
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
 
-      - name: Build history service application, and deploy to dockerhub
+      - name: Build application, and deploy to dockerhub
         run: docker build -t portofolio:${{secrets.DOCKER_TAGS_APP}} .
 
       - name: List docker images
