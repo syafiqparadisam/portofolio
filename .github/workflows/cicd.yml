@@ -46,9 +46,6 @@ jobs:
       - name: Install Docker
         uses: docker/setup-buildx-action@v1
 
-      - name: Go to project directory
-        run: cd project
-
       - name: Login into docker hub
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
 
