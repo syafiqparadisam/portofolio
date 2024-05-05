@@ -8,27 +8,29 @@ on:
 
 jobs:
   ci:
-    name: Setup bun
+    name: Setup nodejs
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Install Bun
-        uses: oven-sh/setup-bun@v1
+      - name: Install nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.12.0
 
       - name: Go to project folder
-        uses: cd project
+        run: cd project
 
       - name: Install dependencies
-        run: bun install
+        run: npm install
 
       - name: Linting
-        run: bun run lint
+        run: npm run lint
 
       - name: Build project
-        run: bun run build
+        run: npm run build
 
   cd:
     name: CD processes
