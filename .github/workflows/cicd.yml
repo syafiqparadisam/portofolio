@@ -52,5 +52,11 @@ jobs:
       - name: Build history service application, and deploy to dockerhub
         run: docker build -t portofolio:${{secrets.DOCKER_TAGS_APP}} .
 
+      - name: List docker images
+        run: docker images
+
+      - name: Update docker image tag
+        run: docker tag portofolio:${{secrets.DOCKER_TAGS_APP}} ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_TAGS_APP}}
+
       - name: Deploy to docker hub
         run: docker push ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_TAGS_APP}}
