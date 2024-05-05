@@ -1,0 +1,52 @@
+name: Ci and Cd
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+jobs:
+  ci:
+    name: Setup bun
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Go to project folder
+        uses: cd project
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Linting
+        run: bun run lint
+
+      - name: Build project
+        run: bun run build
+
+  cd:
+    name: CD processes
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Docker
+        uses: docker/setup-buildx-action@v1
+
+      - name: Go to project directory
+        run: cd project
+
+      - name: Login into docker hub
+        run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
+
+      - name: Build history service application, and deploy to dockerhub
+        run: |
+          docker build -t portofolio:1.0 .
+          docker push portofolio:${{secrets.DOCKER_TAGS_APP}} ${{secrets.DOCKER_USERNAME}}
