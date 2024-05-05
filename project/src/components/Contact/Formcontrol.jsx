@@ -15,7 +15,7 @@ const Formcontrol = () => {
 		reset
 	} = useForm();
 	const name = useRef();
-	const sendEmail = (data) => {
+	const sendEmail = () => {
 		setLoading(true);
 		emailjs
 			.sendForm(
