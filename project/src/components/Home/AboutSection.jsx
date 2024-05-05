@@ -1,6 +1,3 @@
-import { TbClockBolt } from "react-icons/tb";
-import { BsArrowDown, BsListCheck } from "react-icons/bs";
-import { RiTeamFill } from "react-icons/ri";
 import "aos/dist/aos.css";
 import LayoutImageAndText from "../../utils/LayoutImageAndText";
 import schoolIlustration from "../../assets/school.png"

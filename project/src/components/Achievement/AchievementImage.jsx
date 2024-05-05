@@ -49,4 +49,8 @@ const AchievementImage = ({ src, title }) => {
 	);
 };
 
+AchievementImage.propTypes = {
+	
+}
+
 export default AchievementImage;

@@ -37,7 +37,8 @@ const NavigationBar = () => {
 		if (window.innerWidth >= 700) {
 			setHamburgerMenu(false);
 		}
-	});
+	}, [hamburgerMenu]);
+	
 	return (
 		<nav
 			className={`w-full flex items-center flex-row shadow-4xl minilaptop:sticky relative`}

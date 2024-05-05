@@ -1,7 +1,6 @@
 import Home from "./pages/Home";
 
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import NavigationBar from "./utils/NavigationBar";
 import Layout from "./utils/Layout";
 import { useEffect } from "react";
 import Aos from "aos";
@@ -41,16 +40,3 @@ const App = () => {
 	);
 };
 export default App;
-
-//   <ChakraProvider>
-//     <NavigationBar />
-//     <CardContext.Provider value={card}>
-//       <Routes>
-//         <Route path="/portofolio/" element={<Home />} />
-//         <Route path="/portofolio/client" element={<Client />} />
-//         <Route path="/portofolio/portofolio" element={<Portofolio />} />
-//         <Route path="/portofolio/service" element={<Service />} />
-//       </Routes>
-//     </CardContext.Provider>
-//     <Footer />
-//   </ChakraProvider>

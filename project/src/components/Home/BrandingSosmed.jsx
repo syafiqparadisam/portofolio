@@ -1,4 +1,3 @@
-import React from 'react'
 
 const BrandingSosmed = ({link, icon, animate}) => {
   return (

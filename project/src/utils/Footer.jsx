@@ -3,11 +3,9 @@ import {
 	BsInstagram,
 	BsLinkedin,
 	BsTiktok,
-	BsYoutube,
 } from "react-icons/bs";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiCopyright } from "react-icons/bi";
-import { TbClockBolt } from 'react-icons/tb';
 
 const Footer = () => {
 	const goto = () => {

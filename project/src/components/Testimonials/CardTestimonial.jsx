@@ -1,4 +1,4 @@
-const CardTestimonial = ({ user, imageUrl, inisial,alt,bgColor,ulasan }) => {
+const CardTestimonial = ({ user, inisial,bgColor,ulasan }) => {
 	return (
 		<div data-aos="zoom-in" className="tablet:w-96 w-full tablet:mx-0 mx-5 flex flex-col items-start shadow-xl rounded-lg pb-10 p-2  hover:bg-gray-300">
 			<div className="flex w-full text-left pb-3 gap-2 items-center justify-start">

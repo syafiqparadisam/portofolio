@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 
 const LayoutImageAndText = ({
 	image = "https://placeholder.com/1600x900",
