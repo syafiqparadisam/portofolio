@@ -22,15 +22,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20.12.0
-        
-      # - name: Go to project folder
-      #   run: ll
-
-      # - name: Go to project folder
-      #   run: cd project
-      
-      # - name: Print working dir
-      #   run: pwd
 
       - name: Install dependencies
         run: npm install
@@ -41,23 +32,27 @@ jobs:
       - name: Build project
         run: npm run build
 
-  # cd:
-  #   name: CD processes
-  #   runs-on: ubuntu-22.04
-  #   steps:
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v2
+  cd:
+    name: CD processes
+    runs-on: ubuntu-22.04
+    defaults:
+      run:
+        working-directory: ./project
 
-  #     - name: Install Docker
-  #       uses: docker/setup-buildx-action@v1
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-  #     - name: Go to project directory
-  #       run: cd project
+      - name: Install Docker
+        uses: docker/setup-buildx-action@v1
 
-  #     - name: Login into docker hub
-  #       run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
+      - name: Go to project directory
+        run: cd project
 
-  #     - name: Build history service application, and deploy to dockerhub
-  #       run: |
-  #         docker build -t portofolio:${{secrets.DOCKER_TAGS_APP}} .
-  #         docker push portofolio:${{secrets.DOCKER_TAGS_APP}} ${{secrets.DOCKER_USERNAME}}
+      - name: Login into docker hub
+        run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
+
+      - name: Build history service application, and deploy to dockerhub
+        run: |
+          docker build -t portofolio:${{secrets.DOCKER_TAGS_APP}} .
+          docker push portofolio:${{secrets.DOCKER_TAGS_APP}} ${{secrets.DOCKER_USERNAME}}
