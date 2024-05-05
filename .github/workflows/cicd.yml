@@ -10,6 +10,9 @@ jobs:
   ci:
     name: Setup nodejs
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./project
 
     steps:
       - name: Checkout repo
@@ -20,23 +23,23 @@ jobs:
         with:
           node-version: 20.12.0
         
-      - name: Go to project folder
-        run: ll
+      # - name: Go to project folder
+      #   run: ll
 
-      - name: Go to project folder
-        run: cd project
+      # - name: Go to project folder
+      #   run: cd project
       
-      - name: Print working dir
-        run: pwd
+      # - name: Print working dir
+      #   run: pwd
 
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      # - name: Linting
-      #   run: npm run lint
+      - name: Linting
+        run: npm run lint
 
-      # - name: Build project
-      #   run: npm run build
+      - name: Build project
+        run: npm run build
 
   # cd:
   #   name: CD processes
