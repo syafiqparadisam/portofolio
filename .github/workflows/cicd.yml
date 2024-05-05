@@ -50,6 +50,7 @@ jobs:
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
 
       - name: Build history service application, and deploy to dockerhub
-        run: |
-          docker build -t portofolio:${{secrets.DOCKER_TAGS_APP}} .
-          docker push ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_TAGS_APP}}
+        run: docker build -t portofolio:${{secrets.DOCKER_TAGS_APP}} .
+
+      - name: Deploy to docker hub
+        run: docker push ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_TAGS_APP}}
