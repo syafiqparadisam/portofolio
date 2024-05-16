@@ -18,8 +18,8 @@ const Projects = () => {
 				position={"left"}
 				bgColor={"bg-purple-300"}
 				image={ramadhanWebsite}
-				
-				description="This is my first website that i've created using HTML, CSS, bootstrap. This website was created during a middle school assignment presentation about our favorite subject, and I love religious studies. Armed with little knowledge about website development, namely HTML and CSS, I dared to embark on this project. While other classmates used PowerPoint for their presentations, I created a website. It was an extraordinary experience for me, especially since it was my first time creating a website"
+				link={"https://ramadhanwebsite.netlify.app"}
+				description="This is my first website that i've created using HTML, CSS, bootstrap. This website was created during a middle school assignment presentation about our favorite subject, and I love religious studies. Armed with little knowledge about website development, namely HTML and CSS, I dared to embark on this project. While other classmates used PowerPoint for their presentations, I created a website. It was an extraordinary experience for me, especially since it was my first time creating a website, Now you can see this website on"
 			/>
 			<LayoutImageAndText
 				position={"right"}

@@ -23,8 +23,8 @@ const LayoutImageAndText = ({
 					>
 						{link ? (
 							<>
-								<a href="">
 									<img
+										onClick={() => window.open(link)}
 										src={image}
 										alt={alt}
 										width={"1600px"}
@@ -32,7 +32,6 @@ const LayoutImageAndText = ({
 										className="overflow-hidden mx-auto rounded-md minilaptop:mb-0 mb-2"
 										data-aos="zoom-in"
 									/>
-								</a>
 							</>
 						) : (
 							<>
@@ -54,6 +53,7 @@ const LayoutImageAndText = ({
 							data-aos="fade-left"
 						>
 							{description}
+							{link && <p className={"underline text-blue-700 cursor-pointer"} onClick={() => window.open(link)}>{link}</p>}
 						</p>
 					</div>
 				</div>
