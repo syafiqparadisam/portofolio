@@ -7,7 +7,7 @@ const LayoutImageAndText = ({
 	cursor,
 	link,
 	alt,
-	color
+	color,
 }) => {
 	return (
 		<section
