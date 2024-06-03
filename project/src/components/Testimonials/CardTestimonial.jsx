@@ -8,7 +8,7 @@ const CardTestimonial = ({ user, inisial,bgColor,ulasan }) => {
 				<h4 className="font-bold text-xl">{user}</h4>
 			</div>
 			<div className="w-4/5 mx-auto flex items-center justify-start">
-				<p className="w-full h-20 overflow-hidden">{ulasan}</p>
+				<p className="w-full h-full overflow-hidden">{ulasan}</p>
 			</div>
 		</div>
 	);
