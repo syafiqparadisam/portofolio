@@ -50,13 +50,10 @@ jobs:
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
 
       - name: Build application, and deploy to dockerhub
-        run: docker build -t portofolio:${{secrets.DOCKER_TAGS_APP}} .
-
-      - name: List docker images
-        run: docker images
-
+        run: docker build -t portofolio:${{secrets.DOCKER_PORTOFOLIO_TAGS_APP}} .
+        
       - name: Update docker image tag
-        run: docker tag portofolio:${{secrets.DOCKER_TAGS_APP}} ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_TAGS_APP}}
+        run: docker tag portofolio:${{secrets.DOCKER_PORTOFOLIO_TAGS_APP}} ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_PORTOFOLIO_TAGS_APP}}
 
       - name: Deploy to docker hub
-        run: docker push ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_TAGS_APP}}
+        run: docker push ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_PORTOFOLIO_TAGS_APP}}
