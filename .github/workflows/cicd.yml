@@ -21,9 +21,11 @@ jobs:
           node-version: 20.12.0
 
       - name: Install dependencies
+        working-directory: ./project
         run: npm install
 
       - name: Linting
+        working-directory: ./project
         run: npm run lint
 
   staging:
