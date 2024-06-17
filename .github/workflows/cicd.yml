@@ -50,7 +50,7 @@ jobs:
           password: ${{secrets.DOCKER_PASSWORD}}
 
 
-      - name: Deploy history service to dockerhub
+      - name: Deploy frontend app to dockerhub
         uses: docker/build-push-action@v5
         with:
           context: "{{defaultContext}}:project"
