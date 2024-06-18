@@ -12,6 +12,7 @@ ENV VITE_SERVICE_ID=${VITE_SERVICE_ID}
 ENV VITE_PUBLIC_KEY=${VITE_PUBLIC_KEY}
 ENV VITE_TEMPLATE_ID=${VITE_TEMPLATE_ID}
 
+
 # # Salin semua file proyek ke dalam direktori kerja
 COPY . .
 
