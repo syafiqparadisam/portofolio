@@ -1,12 +1,10 @@
 import {
-	SiAlibabacloud,
 	SiAlibabadotcom,
 	SiAnsible,
 	SiApachekafka,
 	SiArchlinux,
 	SiArduino,
 	SiAssemblyscript,
-	SiAstro,
 	SiC,
 	SiCentos,
 	SiChakraui,
@@ -17,8 +15,6 @@ import {
 	SiGrafana,
 	SiJaeger,
 	SiKubernetes,
-	SiMaterialdesign,
-	SiMongoose,
 	SiMui,
 	SiNestjs,
 	SiNetlify,
@@ -35,7 +31,6 @@ import {
 	SiSurrealdb,
 	SiSvelte,
 	SiTauri,
-	SiTypescript,
 	SiUbuntu,
 	SiVercel,
 	SiWebassembly,
@@ -50,7 +45,7 @@ import {
 	BiLogoGoLang,
 	BiLogoTypescript,
 } from "react-icons/bi";
-import { SiMysql, SiMongodb, SiPrisma, SiExpress } from "react-icons/si";
+import { SiMysql, SiMongodb,SiExpress } from "react-icons/si";
 import { FaAws, FaBootstrap, FaJira, FaRaspberryPi, FaTrello } from "react-icons/fa";
 import TechService from "../components/Services/TechService";
 import Headers from "../utils/Headers";
