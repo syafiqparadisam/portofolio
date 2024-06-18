@@ -22,7 +22,7 @@ COPY . .
 # Install dependencies
 RUN npm install
 
-# Build app 
+# Building app 
 RUN npm run build
 
 # runs app
