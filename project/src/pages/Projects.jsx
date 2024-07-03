@@ -28,9 +28,9 @@ const Projects = () => {
 			/>
 			<LayoutImageAndText
 				position={"left"}
-				image={paymentku}
+				video={"https://res.cloudinary.com/dktwq4f3f/video/upload/v1716439798/lv_0_20240523101204_lelo6d.mp4"}
 				bgColor={"bg-purple-300"}
-				description="This is a payment website that provide you transfer and topup money, pay bill, topup games. I created this website with microservices architecture using ReactJS, NestJS, Golang, Gofiber, Redis, MySQL, and i monitor this website using prometheus and jaeger. I plan to adding more features such as topup with real money, transfer real money, topup games, and pay bill"
+				description="This is a payment website that provide you transfer and topup money, pay bill, topup games. I created this website with microservices architecture using ReactJS, NestJS, Golang, Gofiber, Redis, MySQL, and i monitor this website using prometheus and jaeger. This website is already done, but i haven't deploy it, because to deploy this website we must rent a VPS. I plan to adding more features such as topup with real money, transfer real money, topup games, and pay bill"
 			/>
 		</div>
 	);
