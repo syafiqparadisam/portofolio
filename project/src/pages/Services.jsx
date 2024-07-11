@@ -1,53 +1,34 @@
 import {
-  SiAlibabadotcom,
   SiAlpinedotjs,
   SiAndroidstudio,
   SiAnsible,
-  SiApachekafka,
   SiArchlinux,
   SiArduino,
-  SiArgo,
-  SiAssemblyscript,
   SiBlockchaindotcom,
   SiC,
-  SiCentos,
   SiChakraui,
   SiCircleci,
-  SiCockroachlabs,
-  SiCplusplus,
   SiDebian,
   SiDocker,
-  SiElasticsearch,
-  SiElasticstack,
   SiElectron,
   SiGit,
   SiGithub,
-  SiGooglecloud,
-  SiGrafana,
-  SiHiveBlockchain,
-  SiIstio,
+  SiGithubactions,
   SiJaeger,
-  SiKibana,
   SiKubernetes,
-  SiLogstash,
   SiMui,
   SiNestjs,
   SiNetlify,
-  SiNextdotjs,
   SiNginx,
   SiPostgresql,
   SiPrometheus,
-  SiRabbitmq,
   SiReact,
   SiReacthookform,
-  SiReactivex,
   SiReactrouter,
   SiRedis,
   SiRust,
-  SiSurrealdb,
   SiSvelte,
   SiTauri,
-  SiTensorflow,
   SiUbuntu,
   SiVercel,
   SiWebassembly,
@@ -61,12 +42,11 @@ import {
   BiLogoRedux,
   BiLogoGoLang,
   BiLogoTypescript,
+  BiServer,
 } from "react-icons/bi";
 import { SiMysql, SiMongodb, SiExpress } from "react-icons/si";
 import {
-  FaAws,
   FaBootstrap,
-  FaJava,
   FaJira,
   FaRaspberryPi,
   FaTrello,
@@ -113,7 +93,7 @@ const Services = () => {
               name: "MUI",
             },
           ]}
-          description="I will build frontend with react if the website has too many CSR"
+          description="I can build frontend app with react"
         />
         <TechService
           title={"Frontend Developer"}
@@ -143,7 +123,7 @@ const Services = () => {
               name: "Bootstrap",
             },
           ]}
-          description="I also can build website with no javascript framework"
+          description="I can build website with native html,css,js"
         />
         <TechService
           title={"Backend Developer"}
@@ -169,15 +149,11 @@ const Services = () => {
               name: "Nginx",
             },
             {
-              icon: <SiRabbitmq size={"40px"} color="red" />,
-              name: "RabbitMQ",
-            },
-            {
-              icon: <SiApachekafka size={"40px"} color="black" />,
-              name: "Apache Kafka",
+              icon: <SiRust size={"40px"} />,
+              name: "Rust",
             },
           ]}
-          description="I will build your backend system with Node.js, Golang"
+          description="I can build your backend system with Node.js, Golang, and rust"
         />
         <TechService
           title={"Database"}
@@ -198,33 +174,29 @@ const Services = () => {
               icon: <SiPostgresql size={"40px"} color="blue" />,
               name: "PostgreSQL",
             },
-            {
-              icon: <SiSurrealdb size={"40px"} color="red" />,
-              name: "SurrealDB",
-            },
-            {
-              icon: <SiCockroachlabs size={"40px"} color="black" />,
-              name: "CockroachDB",
-            },
           ]}
-          description="I also know the database types such as SQL, NoSQL, InMemory, and more"
+          description="I have used these database such as SQL, NoSQL, InMemory, and more"
         />
         <TechService
           title={"Frontend SSR AND SSG"}
           icon={[
             { icon: <SiSvelte size={"40px"} color="red" />, name: "Svelte" },
             {
-              icon: <SiAlpinedotjs size={"40px"} color="red" />,
+              icon: <SiAlpinedotjs size={"40px"} color="cyan" />,
               name: "Alpine.js",
             },
           ]}
-          description="I also can build frontend app with Svelte or Nextjs"
+          description="I can build frontend app with Svelte, HTMX, AlpineJS"
         />
         <TechService
           title={"Others"}
           icon={[
             { icon: <SiGit size={"40px"} color="red" />, name: "Git" },
-            { icon: <SiGithub size={"40px"} color="black" />, name: "GitHub" },
+            {
+              icon: <SiGithubactions size={"40px"} color="black" />,
+              name: "GitHub Actions",
+            },
+            { icon: <SiGithub size={"40px"} color="black" />, name: "Github" },
             { icon: <FaTrello size={"40px"} color="blue" />, name: "Trello" },
             { icon: <FaJira size={"40px"} color="blue" />, name: "Jira" },
             {
@@ -232,22 +204,22 @@ const Services = () => {
               name: "CircleCI",
             },
           ]}
-          description="I also knowing VCS, other SDLC tools"
+          description="I knows VCS, CI/CD, Project management tools"
         />
         <TechService
           title={"Hosting"}
           icon={[
-            {
-              icon: <SiGooglecloud size={"40px"} color="blue" />,
-              name: "Google Cloud",
-            },
             { icon: <SiVercel size={"40px"} color="black" />, name: "Vercel" },
             {
               icon: <SiNetlify size={"40px"} color="black" />,
               name: "Netlify",
             },
+            {
+              icon: <BiServer size={"40px"}/>,
+              name: "Virtual Private Server"
+            }
           ]}
-          description="I also use cloud computing and hosting provider"
+          description="I usually host mywebsite using these provider, docker,and VPS"
         />
         <TechService
           title={"Linux"}
@@ -269,33 +241,15 @@ const Services = () => {
               name: "Kubernetes",
             },
             {
-              icon: <SiIstio color="blue" size={"40px"}/>,
-              name: "Istio",
-            },
-            {
               icon: <SiPrometheus size={"40px"} color="red" />,
               name: "Prometheus",
             },
             { icon: <SiDocker size={"45px"} color="blue" />, name: "Docker" },
             { icon: <SiJaeger size={"40px"} color="cyan" />, name: "Jaeger" },
-            { icon: <SiArgo size={"40px"} color="red" />, name: "Argo" },
-            {
-              icon: <SiGrafana size={"40px"} color="orange" />,
-              name: "Grafana",
-            },
             {
               icon: <SiAnsible size={"40px"} color="black" />,
               name: "Ansible",
             },
-            {
-              icon: <SiElasticsearch size={"40px"} color="black" />,
-              name: "Elasticsearch",
-            },
-            {
-              icon: <SiLogstash size={"40px"} color="black" />,
-              name: "Logstash",
-            },
-            { icon: <SiKibana size={"40px"} color="black" />, name: "Kibana" },
           ]}
           description="I also knows devops tools"
         />
@@ -312,16 +266,8 @@ const Services = () => {
             },
             { icon: <SiRust size={"40px"} color="black" />, name: "Rust" },
             { icon: <SiC size={"40px"} color="darkBlue" />, name: "C" },
-            {
-              icon: <SiCplusplus size={"40px"} color="darkBlue" />,
-              name: "C++",
-            },
-            {
-              icon: <FaJava color="red" size={"40px"}/>,
-              name: "Java",
-            },
           ]}
-          description="I also learn this language to have know about low level programming"
+          description="I am familiar with these programming languages"
         />
         <TechService
           title={"Mobile developer"}
@@ -363,7 +309,7 @@ const Services = () => {
             {
               icon: <SiWebassembly color="blue" size={"40px"} />,
               name: "Web assembly",
-            }
+            },
           ]}
           description="I am learning IOT,cross platform app, mobile app,AI,WASM,desktop app, low level language, blockchain"
         />

@@ -14,7 +14,10 @@ const AchievementImage = ({ src, title }) => {
 			<img
 				src={src}
 				className="rounded-md border max-w-[300px] min-w-[200px] w-full border-white hover:scale-105 transition ease-in-out duration-300"
-				onClick={() => setModalBox(true)}
+				onClick={() => {
+					setModalBox(true)
+					window.scrollTo({top: "300", behavior: "smooth"})
+				}}
 				data-aos="zoom-in"
 			/>
 			{modalBox && (
@@ -34,7 +37,7 @@ const AchievementImage = ({ src, title }) => {
 							</h1>
 							<button
 								onClick={() => setModalBox(false)}
-								className="absolute hover:bg-purple-300 rounded-sm z-50 minilaptop:py-1 py-0  px-1 bottom-2 minilaptop:px-3 text-center hp:text-xl text-sm minilaptop:text-3xl text-black right-1"
+								className="absolute hover:bg-purple-300 font-bold rounded-lg z-50 minilaptop:py-1 py-0  px-1 bottom-2 minilaptop:px-3 text-center hp:text-xl text-sm minilaptop:text-3xl text-black right-1"
 							>
 								x
 							</button>
