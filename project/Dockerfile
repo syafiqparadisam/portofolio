@@ -5,14 +5,13 @@ FROM node:20.12-alpine
 WORKDIR /app
 
 # Copy all file inside docker container
-COPY . .
+COPY package*.json .
 
 # Install dependencies
 RUN npm install
 
-# Building app 
-RUN npm run build
+COPY . .
 
 # runs app
-CMD [ "npm", "run","preview"]
+CMD npm run build && npm run preview
 
