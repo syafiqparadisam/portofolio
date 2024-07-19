@@ -1,5 +1,5 @@
 # Use base image from nodejs alpine
-FROM node:22.5-alpine
+FROM node:20.12-alpine
 
 # Set workdir in docker container
 WORKDIR /app
