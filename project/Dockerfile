@@ -1,5 +1,5 @@
 # Use base image from nodejs alpine
-FROM node:20.12-alpine
+FROM node:22.5-alpine
 
 # Set workdir in docker container
 WORKDIR /app
@@ -13,5 +13,5 @@ RUN npm install
 COPY . .
 
 # runs app
-CMD npm run build && npm run preview
+CMD ["sh", "-c", "npm run build && npm run preview"]
 
