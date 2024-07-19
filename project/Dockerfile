@@ -13,5 +13,5 @@ RUN npm install
 COPY . .
 
 # runs app
-CMD ["sh", "-c", "npm run build && npm run preview"]
+CMD ["npm run build && npm run preview"]
 
