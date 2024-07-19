@@ -56,3 +56,7 @@ jobs:
           context: "{{defaultContext}}:project"
           push: true
           tags: ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_PORTOFOLIO_TAGS_APP}}
+          build-args: |
+            VITE_SERVICE_ID=${{secrets.VITE_SERVICE_ID}}
+            VITE_PUBLIC_KEY=${{secrets.VITE_PUBLIC_KEY}}
+            VITE_TEMPLATE_ID=${{secrets.VITE_TEMPLATE_ID}}
