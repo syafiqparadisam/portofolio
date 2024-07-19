@@ -11,8 +11,8 @@ COPY . .
 # Install dependencies
 RUN npm install
 
-RUN npm run build
+# RUN npm run build
 
 # runs app
-CMD npm run preview
+CMD npm run dev
 
