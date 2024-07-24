@@ -6,16 +6,16 @@ WORKDIR /app
 
 # Copy source code
 
-RUN --mount=type=secret,id=vite_service_id \
-    cat /run/secrets/vite_service_id
+RUN --mount=type=secret,id=VITE_SERVICE_ID \
+    cat /run/secrets/VITE_SERVICE_ID
 
 
-RUN --mount=type=secret,id=vite_template_id \
-    cat /run/secrets/vite_template_id
+RUN --mount=type=secret,id=VITE_TEMPLATE_ID \
+    cat /run/secrets/VITE_TEMPLATE_ID
 
 
-RUN --mount=type=secret,id=vite_public_key \
-    cat /run/secrets/vite_public_key
+RUN --mount=type=secret,id=VITE_PUBLIC_KEY \
+    cat /run/secrets/VITE_PUBLIC_KEY
 
 COPY . .
 
