@@ -2,7 +2,6 @@
 FROM node:20.12-alpine AS build
 
 # Set workdir in docker container
-WORKDIR /app
 
 # Copy source code
 
@@ -20,6 +19,8 @@ RUN --mount=type=secret,id=VITE_SERVICE_ID \
 RUN  export VITE_SERVICE_ID=$(cat /run/secrets/VITE_SERVICE_ID) \
 && export VITE_TEMPLATE_ID=$(cat /run/secrets/VITE_TEMPLATE_ID) \
 && export VITE_PUBLIC_KEY=$(cat /run/secrets/VITE_PUBLIC_KEY)
+
+WORKDIR /app
 
 COPY . .
 # ENV VITE_PUBLIC_KEY=Y5qSjyArYPDPZXVdM
