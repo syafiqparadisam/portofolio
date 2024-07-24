@@ -6,13 +6,13 @@ FROM node:20.12-alpine AS build
 # Copy source code
 
 
-RUN --mount=type=secret,id=VITE_TEMPLATE_ID \
+RUN --mount=type=secret,id=VITE_TEMPLATE_ID,required=true,mode=0666 \
     VITE_TEMPLATE_ID=$(cat /run/secrets/VITE_TEMPLATE_ID)
 
-RUN --mount=type=secret,id=VITE_PUBLIC_KEY \
+RUN --mount=type=secret,id=VITE_PUBLIC_KEY,required=true,mode=0666 \
     VITE_PUBLIC_KEY=$(cat /run/secrets/VITE_PUBLIC_KEY)
 
-RUN --mount=type=secret,id=VITE_SERVICE_ID \
+RUN --mount=type=secret,id=VITE_SERVICE_ID,required=true,mode=0666 \
     VITE_SERVICE_ID=$(cat /run/secrets/VITE_SERVICE_ID)
 
 # RUN  export VITE_SERVICE_ID=$(cat /run/secrets/VITE_SERVICE_ID) \
