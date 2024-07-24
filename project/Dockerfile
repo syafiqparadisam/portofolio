@@ -6,9 +6,9 @@ WORKDIR /app
 
 # Copy source code
 
-ARG VITE_PUBLIC_KEY
-ARG VITE_SERVICE_ID
-ARG VITE_TEMPLATE_ID
+ARG VITE_PUBLIC_KEY=exm
+ARG VITE_SERVICE_ID=exm
+ARG VITE_TEMPLATE_ID=exm
 
 ENV VITE_PUBLIC_KEY=${VITE_PUBLIC_KEY}
 ENV VITE_SERVICE_ID=${VITE_SERVICE_ID}
@@ -18,8 +18,6 @@ COPY . .
 
 # Install dependencies
 RUN npm install
-
-
 
 # Build the application
 RUN npm run build
