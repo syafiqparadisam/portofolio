@@ -24,6 +24,11 @@ RUN npm install
 # Build the application
 RUN npm run build
 
+RUN echo ${VITE_PUBLIC_KEY}
+RUN echo ${VITE_TEMPLATE_ID}
+RUN echo ${VITE_SERVICE_ID}
+
+
 # Use a lightweight web server to serve the app
 FROM nginx:alpine
 
