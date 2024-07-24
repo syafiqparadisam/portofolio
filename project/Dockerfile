@@ -18,6 +18,9 @@ RUN --mount=type=secret,id=VITE_PUBLIC_KEY \
     cat /run/secrets/VITE_PUBLIC_KEY
 
 COPY . .
+ENV VITE_PUBLIC_KEY=Y5qSjyArYPDPZXVdM
+ENV VITE_SERVICE_ID=service_gyicy3e
+ENV VITE_TEMPLATE_ID=template_fo97i6y
 
 # Install dependencies
 RUN npm install
