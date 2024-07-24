@@ -12,12 +12,12 @@ RUN npm install
 
 # Build the application
 # Here, we use the build secrets
-RUN --mount=type=secret,id=vite_service_id \
-    --mount=type=secret,id=vite_template_id \
-    --mount=type=secret,id=vite_public_key \
-    VITE_SERVICE_ID=$(cat /run/secrets/vite_service_id) \
-    VITE_TEMPLATE_ID=$(cat /run/secrets/vite_template_id) \
-    VITE_PUBLIC_KEY=$(cat /run/secrets/vite_public_key) \
+RUN --mount=type=secret,id=VITE_SERVICE_ID \
+    --mount=type=secret,id=VITE_TEMPLATE_ID \
+    --mount=type=secret,id=VITE_PUBLIC_KEY \
+    VITE_SERVICE_ID=$(cat /run/secrets/VITE_SERVICE_ID) \
+    VITE_TEMPLATE_ID=$(cat /run/secrets/VITE_TEMPLATE_ID) \
+    VITE_PUBLIC_KEY=$(cat /run/secrets/VITE_PUBLIC_KEY) \
     npm run build
 
 # Use a lightweight web server to serve the app
