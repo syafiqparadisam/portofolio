@@ -16,11 +16,11 @@ RUN --mount=type=secret,id=VITE_PUBLIC_KEY \
 
 RUN --mount=type=secret,id=VITE_SERVICE_ID \
     cat /run/secrets/VITE_SERVICE_ID
-    
-RUN sh -c 'VITE_SERVICE_ID=$(cat /run/secrets/VITE_SERVICE_ID) \
-    VITE_TEMPLATE_ID=$(cat /run/secrets/VITE_TEMPLATE_ID) \
-    VITE_PUBLIC_KEY=$(cat /run/secrets/VITE_PUBLIC_KEY) \
-    npm run build'
+
+RUN  export VITE_SERVICE_ID=$(cat /run/secrets/VITE_SERVICE_ID) \
+&& export VITE_TEMPLATE_ID=$(cat /run/secrets/VITE_TEMPLATE_ID) \
+&& export VITE_PUBLIC_KEY=$(cat /run/secrets/VITE_PUBLIC_KEY) \
+&& npm run build
 
 COPY . .
 # ENV VITE_PUBLIC_KEY=Y5qSjyArYPDPZXVdM
