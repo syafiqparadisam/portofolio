@@ -19,8 +19,7 @@ RUN --mount=type=secret,id=VITE_SERVICE_ID \
 
 RUN  export VITE_SERVICE_ID=$(cat /run/secrets/VITE_SERVICE_ID) \
 && export VITE_TEMPLATE_ID=$(cat /run/secrets/VITE_TEMPLATE_ID) \
-&& export VITE_PUBLIC_KEY=$(cat /run/secrets/VITE_PUBLIC_KEY) \
-&& npm run build
+&& export VITE_PUBLIC_KEY=$(cat /run/secrets/VITE_PUBLIC_KEY)
 
 COPY . .
 # ENV VITE_PUBLIC_KEY=Y5qSjyArYPDPZXVdM
@@ -32,11 +31,6 @@ RUN npm install
 
 # Build the application
 RUN npm run build
-
-RUN echo ${VITE_PUBLIC_KEY}
-RUN echo ${VITE_TEMPLATE_ID}
-RUN echo ${VITE_SERVICE_ID}
-
 
 # Use a lightweight web server to serve the app
 FROM nginx:alpine
