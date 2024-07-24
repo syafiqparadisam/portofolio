@@ -5,20 +5,24 @@ FROM node:20.12-alpine AS build
 WORKDIR /app
 
 # Copy source code
+
+ARG VITE_PUBLIC_KEY
+ARG VITE_SERVICE_ID
+ARG VITE_TEMPLATE_ID
+
+ENV VITE_PUBLIC_KEY=${VITE_PUBLIC_KEY}
+ENV VITE_SERVICE_ID=${VITE_SERVICE_ID}
+ENV VITE_TEMPLATE_ID=${VITE_TEMPLATE_ID}
+
 COPY . .
 
 # Install dependencies
 RUN npm install
 
+
+
 # Build the application
-# Here, we use the build secrets
-RUN --mount=type=secret,id=VITE_SERVICE_ID \
-    --mount=type=secret,id=VITE_TEMPLATE_ID \
-    --mount=type=secret,id=VITE_PUBLIC_KEY \
-    VITE_SERVICE_ID=$(cat /run/secrets/VITE_SERVICE_ID) \
-    VITE_TEMPLATE_ID=$(cat /run/secrets/VITE_TEMPLATE_ID) \
-    VITE_PUBLIC_KEY=$(cat /run/secrets/VITE_PUBLIC_KEY) \
-    npm run build
+RUN npm run build
 
 # Use a lightweight web server to serve the app
 FROM nginx:alpine

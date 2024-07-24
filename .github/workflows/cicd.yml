@@ -51,9 +51,9 @@ jobs:
 
       - name: Prepare build secrets
         run: |
-          echo "${{ secrets.VITE_SERVICE_ID }}" > .VITE_SERVICE_ID
-          echo "${{ secrets.VITE_TEMPLATE_ID }}" > .VITE_TEMPLATE_ID
-          echo "${{ secrets.VITE_PUBLIC_KEY }}" > .VITE_PUBLIC_KEY
+          echo ${{ secrets.VITE_SERVICE_ID }}
+          echo ${{ secrets.VITE_TEMPLATE_ID }}
+          echo ${{ secrets.VITE_PUBLIC_KEY }}
   
 
       - name: Deploy frontend app to dockerhub
@@ -62,7 +62,7 @@ jobs:
           context: "{{defaultContext}}:project"
           push: true
           tags: ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_PORTOFOLIO_TAGS_APP}}
-          secrets: |
-            id=VITE_SERVICE_ID,src=.VITE_SERVICE_ID
-            id=VITE_TEMPLATE_ID,src=.VITE_TEMPLATE_ID
-            id=VITE_PUBLIC_KEY,src=.VITE_PUBLIC_KEY
+          build-args: |
+            - VITE_SERVICE_ID=${{secrets.VITE_SERVICE_ID}}
+            - VITE_PUBLIC_KEY=${{secrets.VITE_PUBLIC_KEY}}
+            - VITE_TEMPLATE_ID=${{secrets.VITE_TEMPLATE_ID}}
