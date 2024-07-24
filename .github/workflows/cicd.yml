@@ -32,7 +32,7 @@ jobs:
   staging:
     name: Push to docker hub
     runs-on: ubuntu-22.04
-    if: ${{github.ref == 'refs/heads/develop'}}
+    if: ${{github.ref == 'refs/heads/fixenv'}}
 
     steps:
       - name: Checkout repository
