@@ -6,13 +6,16 @@ WORKDIR /app
 
 # Copy source code
 
-ARG VITE_PUBLIC_KEY=exm
-ARG VITE_SERVICE_ID=exm
-ARG VITE_TEMPLATE_ID=exm
+RUN --mount=type=secret,id=vite_service_id | \
+    cat /run/secrets/vite_service_id
 
-ENV VITE_PUBLIC_KEY=${VITE_PUBLIC_KEY}
-ENV VITE_SERVICE_ID=${VITE_SERVICE_ID}
-ENV VITE_TEMPLATE_ID=${VITE_TEMPLATE_ID}
+
+RUN --mount=type=secret,id=vite_template_id | \
+    cat /run/secrets/vite_template_id
+
+
+RUN --mount=type=secret,id=vite_public_key | \
+    cat /run/secrets/vite_public_key
 
 COPY . .
 
