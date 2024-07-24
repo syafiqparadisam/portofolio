@@ -57,6 +57,6 @@ jobs:
           push: true
           tags: ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_PORTOFOLIO_TAGS_APP}}
           secrets: |
-            "vite_service_id=${{secrets.VITE_SERVICE_ID}}"
-            "vite_public_key=${{secrets.VITE_PUBLIC_KEY}}"
-            "vite_template_id=${{secrets.VITE_TEMPLATE_ID}}"
+            "VITE_SERVICE_ID=${{secrets.VITE_SERVICE_ID}}"
+            "VITE_PUBLIC_KEY=${{secrets.VITE_PUBLIC_KEY}}"
+            "VITE_TEMPLATE_ID=${{secrets.VITE_TEMPLATE_ID}}"
