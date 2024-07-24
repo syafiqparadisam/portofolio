@@ -1,24 +1,24 @@
 # Use base image from nodejs alpine
-FROM node:20.12-alpine as build
+FROM node:20.12-alpine AS build
 
 # Set workdir in docker container
 WORKDIR /app
 
-ARG VITE_SERVICE_ID
-ARG VITE_TEMPLATE_ID
-ARG VITE_PUBLIC_KEY
-
-ENV VITE_SERVICE_ID=$VITE_SERVICE_ID
-ENV VITE_TEMPLATE_ID=$VITE_TEMPLATE_ID
-ENV VITE_PUBLIC_KEY=$VITE_PUBLIC_KEY
-
-# COPY package*.json .
+# Copy source code
 COPY . .
 
 # Install dependencies
 RUN npm install
 
-RUN npm run build
+# Build the application
+# Here, we use the build secrets
+RUN --mount=type=secret,id=vite_service_id \
+    --mount=type=secret,id=vite_template_id \
+    --mount=type=secret,id=vite_public_key \
+    VITE_SERVICE_ID=$(cat /run/secrets/vite_service_id) \
+    VITE_TEMPLATE_ID=$(cat /run/secrets/vite_template_id) \
+    VITE_PUBLIC_KEY=$(cat /run/secrets/vite_public_key) \
+    npm run build
 
 # Use a lightweight web server to serve the app
 FROM nginx:alpine
