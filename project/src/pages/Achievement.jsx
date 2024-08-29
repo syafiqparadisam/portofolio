@@ -1,5 +1,6 @@
 import AchievementImage from "../components/Achievement/AchievementImage";
 import Headers from "../utils/Headers";
+import sertiSolid from "../assets/serti_solid.png"
 import sertiAWSCloud from "../assets/sertidicodingaws.jpg";
 import sertiDicodingDasar from "../assets/sertidicodingdasar.jpg";
 import sertiGoogleCloud from "../assets/sertidicodinggooglecloud.jpg";
@@ -48,6 +49,10 @@ const Achievement = () => {
           <AchievementImage
             src={sertiC}
             title={"Sertificate Completed C basic"}
+          />
+          <AchievementImage 
+          src={sertiSolid}
+          title={"Sertificate Completed Solid Principle"}
           />
         </div>
       </div>

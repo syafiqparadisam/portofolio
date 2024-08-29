@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const TechService = ({
   title,
@@ -6,11 +6,26 @@ const TechService = ({
   description = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut beatae",
 }) => {
   const [modalBox, setModalBox] = useState(false);
+  const modalRef = useRef();
+
+  // Function to close modal if clicked outside
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      setModalBox(false);
+    }
+  };
 
   useEffect(() => {
+    // Add event listener to detect clicks outside the modal
+    document.addEventListener("mousedown", handleClickOutside);
     if (modalBox == true && window.innerWidth < 810) {
       setModalBox(false);
     }
+
+    return () => {
+      // Cleanup event listener on component unmount
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, [modalBox]);
 
   return (
@@ -27,6 +42,23 @@ const TechService = ({
           {icon.map((i) => i.icon)}
         </div>
       </div>
+      {modalBox && (
+        <div className="fixed z-10" ref={modalRef}>
+          <div className="bg-white shadow-lg p-5 flex gap-10 rounded-lg">
+            {icon.map((i) => {
+              return (
+                <div
+                  className="flex items-center justify-center flex-col"
+                  key={i.icon}
+                >
+                  <p>{i.icon}</p>
+                  <p className="font-bold">{i.name}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </>
   );
 };
