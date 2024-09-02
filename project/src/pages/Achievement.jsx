@@ -1,13 +1,14 @@
 import AchievementImage from "../components/Achievement/AchievementImage";
 import Headers from "../utils/Headers";
-import sertiSolid from "../assets/serti_solid.png"
+import sertiSolid from "../assets/serti_solid.png";
+import sertiFitcom from "../assets/serti_fitcom.png";
 import sertiAWSCloud from "../assets/sertidicodingaws.jpg";
 import sertiDicodingDasar from "../assets/sertidicodingdasar.jpg";
 import sertiGoogleCloud from "../assets/sertidicodinggooglecloud.jpg";
 import sertiProgrammingLogic from "../assets/sertidicodinglogic.jpg";
 import sertiJS from "../assets/sertidicodingjs.png";
 import sertiBackend from "../assets/sertibackend.png";
-import sertiC from "../assets/sertiC.png"
+import sertiC from "../assets/sertiC.png";
 
 const Achievement = () => {
   return (
@@ -50,9 +51,19 @@ const Achievement = () => {
             src={sertiC}
             title={"Sertificate Completed C basic"}
           />
-          <AchievementImage 
-          src={sertiSolid}
-          title={"Sertificate Completed Solid Principle"}
+          <AchievementImage
+            src={sertiSolid}
+            title={"Sertificate Completed Solid Principle"}
+          />
+        </div>
+      </div>
+      <div className="w-full px-10 pt-16 flex flex-col justify-center text-white">
+        <h1 className="font-bold text-2xl pb-2">Competition</h1>
+        <hr className="w-full text-xl font-bold" />
+        <div className="flex minilaptop:justify-start justify-center mx-auto items-center p-8 minilaptop:gap-20 gap-5 flex-wrap">
+          <AchievementImage
+            src={sertiFitcom}
+            title={"Sertificate Finalis Fitcom In STIKOM Surabaya"}
           />
         </div>
       </div>

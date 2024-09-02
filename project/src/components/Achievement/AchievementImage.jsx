@@ -32,30 +32,20 @@ const AchievementImage = ({ src, title }) => {
         data-aos="zoom-in"
       />
       {modalBox && (
-        <div className="fixed top-28 z-40 " ref={modalRef}>
-          <div
-            className="shadow-xl minilaptop:flex hidden flex-col bg-white rounded-xl p-1 w-1/2"
-            style={{
-              top: "50%",
-              right: "50%",
-              transform: "translateX(50%)",
-            }}
-            data-aos="zoom-in"
-          >
-            <div className="w-full flex relative p-3 items-center justify-start flex-wrap">
-              <h1 className="minilaptop:text-lg text-sm font-bold text-black">
-                {title}
-              </h1>
-              <button
-                onClick={() => setModalBox(false)}
-                className="absolute hover:bg-purple-300 font-bold rounded-lg z-50 py-0  px-1 bottom-2 minilaptop:py-1 minilaptop:px-2 text-center hp:text-xl text-sm minilaptop:text-3xl text-black right-1"
-              >
-                x
-              </button>
-            </div>
-            <div className="flex w-full">
-              <img src={src} className="rounded-md border border-white" />
-            </div>
+        <div
+          className="fixed z-10 top-28 bg-white minilaptop:flex rounded-lg hidden"
+          style={{right: "400px"}}
+          ref={modalRef}
+        >
+          <div className="flex p-3 flex-col items-center justify-start flex-wrap">
+            <h1 className="minilaptop:text-lg py-2 text-sm font-bold text-wrap text-black">
+              {title}
+            </h1>
+            <img
+              src={src}
+              className="rounded-md border border-white"
+              width={"500px"}
+            />
           </div>
         </div>
       )}

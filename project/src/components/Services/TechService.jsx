@@ -32,7 +32,7 @@ const TechService = ({
     <>
       <div
         onClick={() => setModalBox(true)}
-        className="lg:w-1/4 minilaptop:w-1/3 w-4/5 hp:m-0 mx-auto bg-white flex flex-wrap tablet:justify-start justify-center flex-col minilaptop:items-start items-center shadow-xl rounded-lg p-4 border-solid hover:bg-gray-300"
+        className="lg:w-1/4 cursor-pointer minilaptop:w-1/3 w-4/5 hp:m-0 mx-auto bg-white flex flex-wrap tablet:justify-start justify-center flex-col minilaptop:items-start items-center shadow-xl rounded-lg p-4 border-solid hover:bg-gray-300"
       >
         <div className="flex w-full text-left pb-3 tablet:items-start items-center flex-col justify-center">
           <h4 className="font-bold text-xl text-left">{title}</h4>
@@ -43,8 +43,8 @@ const TechService = ({
         </div>
       </div>
       {modalBox && (
-        <div className="fixed z-10" ref={modalRef}>
-          <div className="bg-white shadow-lg p-5 flex gap-10 rounded-lg">
+        <div className="fixed z-10 max-w-2xl" ref={modalRef}>
+          <div className="bg-white shadow-lg p-5 flex-wrap justify-center flex gap-10 rounded-lg">
             {icon.map((i) => {
               return (
                 <div

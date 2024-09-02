@@ -1,7 +1,6 @@
 import {
   SiAnsible,
   SiArchlinux,
-  SiC,
   SiDocker,
   SiGit,
   SiGithub,
@@ -18,12 +17,12 @@ import {
   SiRust,
   SiUbuntu,
   SiVercel,
-  SiCircleci,
   SiVuedotjs,
   SiPhp,
   SiReact,
   SiIstio,
   SiNginx,
+  SiSwagger,
 } from "react-icons/si";
 import {
   BiLogoTailwindCss,
@@ -36,7 +35,7 @@ import {
   BiServer,
 } from "react-icons/bi";
 import { SiMysql, SiMongodb, SiExpress } from "react-icons/si";
-import { FaBootstrap, FaJira, FaTrello } from "react-icons/fa";
+import { FaBootstrap, FaGitlab, FaTrello } from "react-icons/fa";
 import TechService from "../components/Services/TechService";
 import Headers from "../utils/Headers";
 
@@ -56,11 +55,11 @@ const Services = () => {
           icon={[
             {
               icon: <BiLogoHtml5 size={"40px"} color="red" />,
-              name: "HTML5",
+              name: "HTML",
             },
             {
               icon: <BiLogoCss3 size={"40px"} color="blue" />,
-              name: "CSS3",
+              name: "CSS",
             },
             {
               icon: <BiLogoJavascript size={"40px"} color="yellow" />,
@@ -72,7 +71,7 @@ const Services = () => {
             },
             {
               icon: <BiLogoTailwindCss size={"40px"} color="skyBlue" />,
-              name: "TailwindCSS",
+              name: "Tailwind",
             },
             {
               icon: <FaBootstrap size={"40px"} color="blue" />,
@@ -86,11 +85,11 @@ const Services = () => {
           icon={[
             {
               icon: <BiLogoNodejs size={"40px"} color="green" />,
-              name: "Node.js",
+              name: "NodeJS",
             },
             {
               icon: <SiExpress size={"40px"} color="black" />,
-              name: "Express.js",
+              name: "ExpressJS",
             },
             {
               icon: <SiNestjs size={"40px"} color="red" />,
@@ -141,7 +140,7 @@ const Services = () => {
               icon: <SiVuedotjs size="40px" color="darkgreen" />,
               name: "VueJS",
             },
-            { icon: <SiReact size={"40px"} color="lightblue" /> },
+            { icon: <SiReact size={"40px"} color="lightblue" />, name: "ReactJS" },
           ]}
           description="I can build frontend app with NextJS"
         />
@@ -149,10 +148,9 @@ const Services = () => {
           title={"Others"}
           icon={[
             { icon: <SiGit size={"40px"} color="red" />, name: "Git" },
-
+            {icon: <SiSwagger size={"40px"} color="black"/> , name: "Swagger"},
             { icon: <SiGithub size={"40px"} color="black" />, name: "Github" },
             { icon: <FaTrello size={"40px"} color="blue" />, name: "Trello" },
-            { icon: <FaJira size={"40px"} color="blue" />, name: "Jira" },
           ]}
           description="I knows VCS, and Project management tools"
         />
@@ -199,8 +197,8 @@ const Services = () => {
               name: "Github Actions",
             },
             {
-              icon: <SiCircleci size={"40px"} color="black" />,
-              name: "CircleCI",
+              icon: <FaGitlab size={"40px"} color="red" />,
+              name: "Gitlab",
             },
             {
               icon: <SiIstio size={"40px"} color="lightblue"/>,
@@ -236,7 +234,6 @@ const Services = () => {
               name: "PHP",
             },
             { icon: <SiRust size={"40px"} color="black" />, name: "Rust" },
-            { icon: <SiC size={"40px"} color="darkBlue" />, name: "C" },
           ]}
           description="I am familiar with these programming languages"
         />
