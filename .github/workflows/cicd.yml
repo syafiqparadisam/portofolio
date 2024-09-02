@@ -40,7 +40,7 @@ jobs:
       - name: Linting Dockerfile
         uses: hadolint/hadolint-action@v3.1.0
         with:
-          dockerfile: Dockerfile
+          dockerfile: project/Dockerfile
           verbose: true
           format: json
 
