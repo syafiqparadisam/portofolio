@@ -51,7 +51,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Deploy frontend app to dockerhub
+      - name: Build frontend app to dockerhub
         env:
           DOCKER_CONTENT_TRUST: 1
         uses: docker/build-push-action@v5
@@ -64,7 +64,7 @@ jobs:
             "VITE_PUBLIC_KEY=${{secrets.VITE_PUBLIC_KEY}}"
             "VITE_TEMPLATE_ID=${{secrets.VITE_TEMPLATE_ID}}"
 
-      - name: Run Trivy vulnerability scanner in fs mode
+      - name: Run Trivy vulnerability scanner docker container
         uses: aquasecurity/trivy-action@0.20.0
         with:
           scan-type: 'image'
