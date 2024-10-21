@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  loki: 
+    image: "grafana/loki:3.0.0"
+    container_name: grafana loki
+    ports:
+      - 
+  
+  prometheus:
+    image: "prom/prometheus:latest"
+    container_name: Prometheus
+    #healthcheck:
+    #  test: ["ecutable", "arg"]
+    #  interval: 1m30s
+    #  timeout: 30s
+    #  retries: 5
+    #  start_period: 30s
+    ports:
+      - 
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+
+
+  

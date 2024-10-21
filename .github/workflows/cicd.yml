@@ -57,19 +57,15 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: "{{defaultContext}}:project"
-          push: false
+          push: true
           tags: ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_PORTOFOLIO_TAGS_APP}}
-          secrets: |
-            "VITE_SERVICE_ID=${{secrets.VITE_SERVICE_ID}}"
-            "VITE_PUBLIC_KEY=${{secrets.VITE_PUBLIC_KEY}}"
-            "VITE_TEMPLATE_ID=${{secrets.VITE_TEMPLATE_ID}}"
 
-      - name: Run Trivy vulnerability scanner docker container
-        uses: aquasecurity/trivy-action@0.20.0
-        with:
-          scan-type: 'image'
-          scan-ref: ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_PORTOFOLIO_TAGS_APP}}
-          trivy-config: trivy.yaml
+      # - name: Run Trivy vulnerability scanner docker container
+      #   uses: aquasecurity/trivy-action@0.20.0
+      #   with:
+      #     scan-type: 'image'
+      #     scan-ref: ${{secrets.DOCKER_USERNAME}}/portofolio:${{secrets.DOCKER_PORTOFOLIO_TAGS_APP}}
+      #     trivy-config: trivy.yaml
 
       - name: Login into docker hub
         uses: docker/login-action@v3

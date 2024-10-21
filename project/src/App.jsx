@@ -12,31 +12,31 @@ import Contact from "./pages/Contact";
 import Achievement from "./pages/Achievement";
 
 const App = () => {
-	useEffect(() => {
-		Aos.init({
-			once: false,
-			mirror: true,
-			duration: 1000,
-			offset: 150,
-		});
-	}, []);
+  useEffect(() => {
+    Aos.init({
+      once: false,
+      mirror: true,
+      duration: 1000,
+      offset: 150,
+    });
+  }, []);
 
-	return (
-		<>
-			<BrowserRouter>
-				<Routes>
-					<Route element={<Layout />}>
-						<Route index element={<Home />} />
-						<Route path="HowToOrder" element={<HowToOrder/>} />
-						<Route path="contact" element={<Contact/>} />
-						<Route path="testimoni" element={<Testimonial/>} />
-						<Route path="achievement" element={<Achievement/>} />
-						<Route path="project" element={<Projects />} />
-						<Route path="services" element={<Services />} />
-					</Route>
-				</Routes>
-			</BrowserRouter>
-		</>
-	);
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="HowToOrder" element={<HowToOrder />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="testimoni" element={<Testimonial />} />
+            <Route path="achievement" element={<Achievement />} />
+            <Route path="project" element={<Projects />} />
+            <Route path="services" element={<Services />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 };
 export default App;
