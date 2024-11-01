@@ -12,6 +12,16 @@ RUN npm install
 # Copy source code
 COPY . .
 
+# Definisikan argumen build
+ARG VITE_SERVICE_ID
+ARG VITE_TEMPLATE_ID
+ARG VITE_PUBLIC_KEY
+
+# Set environment variable dari argumen
+ENV VITE_SERVICE_ID=$VITE_SERVICE_ID
+ENV VITE_PUBLIC_KEY=${VITE_PUBLIC_KEY}
+ENV VITE_TEMPLATE_ID=${VITE_TEMPLATE_ID}
+
 RUN npm run build
 
 # Use a lightweight web server to serve the app
@@ -21,7 +31,6 @@ FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
-
 
 COPY ./env.sh /docker-entrypoint.d/env.sh
 RUN chmod +x /docker-entrypoint.d/env.sh
