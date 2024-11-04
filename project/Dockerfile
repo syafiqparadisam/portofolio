@@ -1,5 +1,5 @@
 # Use base image from nodejs alpine
-FROM node:20.12-alpine AS build
+FROM node:21-alpine AS build
 
 # Set workdir in docker container
 WORKDIR /app
@@ -12,15 +12,10 @@ RUN npm install
 # Copy source code
 COPY . .
 
-# Definisikan argumen build
-ARG VITE_SERVICE_ID
-ARG VITE_TEMPLATE_ID
-ARG VITE_PUBLIC_KEY
-
 # Set environment variable dari argumen
-ENV VITE_SERVICE_ID=$VITE_SERVICE_ID
-ENV VITE_PUBLIC_KEY=$VITE_PUBLIC_KEY
-ENV VITE_TEMPLATE_ID=$VITE_TEMPLATE_ID
+ENV VITE_SERVICE_ID="MY_APP_SERVICE_ID"
+ENV VITE_PUBLIC_KEY="MY_APP_PUBLIC_KEY"
+ENV VITE_TEMPLATE_ID="MY_APP_TEMPLATE_ID"
 
 RUN npm run build
 
