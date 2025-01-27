@@ -1,7 +1,8 @@
 import LayoutImageAndText from "../utils/LayoutImageAndText";
 import Headers from "../utils/Headers";
-import ramadhanWebsite from "../assets/ramadhanWebsite.png";
-import eccomerseWebsite from "../assets/eccomerse2.jpg";
+import ramadhanWebsite from "/images/ramadhanWebsite.png";
+import eccomerseWebsite from "/images/eccomerse2.jpg";
+import kosloka from "/images/kosloka-filament.png";
 
 const Projects = () => {
   return (
@@ -29,6 +30,12 @@ const Projects = () => {
         image={eccomerseWebsite}
         bgColor={"bg-purple-300"}
         description="This is a Ecommerce website, this website we build by two people, i am frontend and designing database, and myfriend is backend. We created this website using MySQL, ExpressJS, ReactJS, and NodeJs. The existing features include login, register, get product, filter product, add to cart."
+      />
+      <LayoutImageAndText
+        position={"right"}
+        image={kosloka}
+        link={"https://kosloka.global-inovasi.com"}
+        description="This is a project that i've created when i was intern at software house in sidoarjo, I created this website with laravel filament, mysql. The features included login,register, invoice generate, verification bill, permission, etc"
       />
     </div>
   );

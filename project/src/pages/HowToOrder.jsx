@@ -1,9 +1,9 @@
 import Headers from "../utils/Headers";
 import LayoutImageAndText from "../utils/LayoutImageAndText";
-import peopleThinking from "../assets/peoplethinking-removebg-preview.png"
-import instagramDm from "/src/assets/Instagram-DM-illustration-removebg-preview.png"
-import programming from "/src/assets/illustrationprogrammer-removebg-preview.png";
-import webreview from "/src/assets/webreview-removebg-preview.png";
+import peopleThinking from "/images/peoplethinking-removebg-preview.png"
+import instagramDm from "/images/Instagram-DM-illustration-removebg-preview.png"
+import programming from "/images/illustrationprogrammer-removebg-preview.png";
+import webreview from "/images/webreview-removebg-preview.png";
 
 
 const HowToOrder = () => {

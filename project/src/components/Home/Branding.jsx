@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
 import { BsGithub, BsInstagram, BsTiktok, BsLinkedin } from "react-icons/bs";
-import programmerIlustration from "/src/assets/ilustrasiprogrammer-removebg-preview.png";
+import programmerIlustration from "/images/ilustrasiprogrammer-removebg-preview.png";
 import BrandingSosmed from "./BrandingSosmed";
 
 const Branding = () => {

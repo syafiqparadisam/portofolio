@@ -23,7 +23,7 @@ cd project
 nano .env
 ```
 
-### 3. Fill this content in your .env
+### 3. Fill this content in your .env like .env.example
 ```
 VITE_SERVICE_ID=
 VITE_PUBLIC_KEY=

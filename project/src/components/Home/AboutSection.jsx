@@ -1,7 +1,7 @@
 import "aos/dist/aos.css";
 import LayoutImageAndText from "../../utils/LayoutImageAndText";
-import schoolIlustration from "../../assets/school.png"
-import experienceIlustration from "../../assets/experience-removebg-preview.png"
+import schoolIlustration from "/images/school.png"
+import experienceIlustration from "/images/experience-removebg-preview.png"
 
 const AboutSection = () => {
 	return (
