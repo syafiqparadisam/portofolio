@@ -31,7 +31,7 @@ jobs:
     name: Push to docker hub
     runs-on: ubuntu-22.04
     needs: linting
-    if: ${{github.ref == 'refs/heads/main'}} || ${{github.ref == 'refs/heads/develop'}}
+    if: ${{github.ref == 'refs/heads/main'}}
 
     steps:
       - name: Checkout repository
