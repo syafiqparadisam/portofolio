@@ -1,6 +1,5 @@
 import {
   SiAnsible,
-  SiArchlinux,
   SiDocker,
   SiGit,
   SiGithub,
@@ -8,34 +7,39 @@ import {
   SiJaeger,
   SiKubernetes,
   SiNestjs,
-  SiNetlify,
   SiNextdotjs,
   SiPostgresql,
   SiPrometheus,
-  SiDebian,
   SiRedis,
   SiRust,
-  SiUbuntu,
-  SiVercel,
-  SiVuedotjs,
+  SiBurpsuite,
+  SiC,
   SiPhp,
   SiReact,
-  SiIstio,
   SiNginx,
   SiSwagger,
+  SiLaravel,
+  SiFlask,
+  SiPython,
+  SiKalilinux,
+  SiCloudflare,
+  SiZap,
+  SiK6,
+  SiWireshark,
+  SiOpenwrt,
+  SiMikrotik,
+  SiCisco,
 } from "react-icons/si";
+import { BsRouter } from "react-icons/bs";
+import { MdVpnKey } from "react-icons/md";
 import {
   BiLogoTailwindCss,
-  BiLogoCss3,
   BiLogoJavascript,
-  BiLogoHtml5,
-  BiLogoNodejs,
   BiLogoGoLang,
   BiLogoTypescript,
-  BiServer,
 } from "react-icons/bi";
 import { SiMysql, SiMongodb, SiExpress } from "react-icons/si";
-import { FaBootstrap, FaGitlab, FaTrello } from "react-icons/fa";
+import { FaBootstrap, FaExpeditedssl, FaServer, FaTrello } from "react-icons/fa";
 import TechService from "../components/Services/TechService";
 import Headers from "../utils/Headers";
 
@@ -54,14 +58,6 @@ const Services = () => {
           title={"Frontend Developer"}
           icon={[
             {
-              icon: <BiLogoHtml5 size={"40px"} color="red" />,
-              name: "HTML",
-            },
-            {
-              icon: <BiLogoCss3 size={"40px"} color="blue" />,
-              name: "CSS",
-            },
-            {
               icon: <BiLogoJavascript size={"40px"} color="yellow" />,
               name: "JavaScript",
             },
@@ -69,6 +65,8 @@ const Services = () => {
               icon: <BiLogoTypescript size={"40px"} color="blue" />,
               name: "TypeScript",
             },
+            { icon: <SiNextdotjs size="40px" color="black" />, name: "NextJs" },
+            { icon: <SiReact size={"40px"} color="lightblue" />, name: "ReactJS" },
             {
               icon: <BiLogoTailwindCss size={"40px"} color="skyBlue" />,
               name: "Tailwind",
@@ -78,15 +76,11 @@ const Services = () => {
               name: "Bootstrap",
             },
           ]}
-          description="I can build website with native html,css,js"
+          description="I can build website with framework or native"
         />
         <TechService
           title={"Backend Developer"}
           icon={[
-            {
-              icon: <BiLogoNodejs size={"40px"} color="green" />,
-              name: "NodeJS",
-            },
             {
               icon: <SiExpress size={"40px"} color="black" />,
               name: "ExpressJS",
@@ -96,7 +90,7 @@ const Services = () => {
               name: "NestJS",
             },
             {
-              icon: <SiPhp size={"40px"} color="darkblue" />,
+              icon: <SiLaravel size={"40px"} color="red" />,
               name: "PHP",
             },
             {
@@ -104,11 +98,11 @@ const Services = () => {
               name: "Golang",
             },
             {
-              icon: <SiRust size={"40px"} />,
-              name: "Rust",
+              icon: <SiFlask size={"40px"} />,
+              name: "Flask",
             },
           ]}
-          description="I can build your backend system with Node.js, Golang, and rust"
+          description="I can build backend system with node.js, golang, laravel, flask"
         />
         <TechService
           title={"Database"}
@@ -132,18 +126,7 @@ const Services = () => {
           ]}
           description="I have used these database such as SQL, NoSQL, InMemory, and more"
         />
-        <TechService
-          title={"Frontend Framework"}
-          icon={[
-            { icon: <SiNextdotjs size="40px" color="black" />, name: "NextJs" },
-            {
-              icon: <SiVuedotjs size="40px" color="darkgreen" />,
-              name: "VueJS",
-            },
-            { icon: <SiReact size={"40px"} color="lightblue" />, name: "ReactJS" },
-          ]}
-          description="I can build frontend app with NextJS"
-        />
+
         <TechService
           title={"Others"}
           icon={[
@@ -153,33 +136,6 @@ const Services = () => {
             { icon: <FaTrello size={"40px"} color="blue" />, name: "Trello" },
           ]}
           description="I knows VCS, and Project management tools"
-        />
-        <TechService
-          title={"Hosting"}
-          icon={[
-            { icon: <SiVercel size={"40px"} color="black" />, name: "Vercel" },
-            {
-              icon: <SiNetlify size={"40px"} color="black" />,
-              name: "Netlify",
-            },
-            {
-              icon: <BiServer size={"40px"} />,
-              name: "Virtual Private Server",
-            },
-          ]}
-          description="I usually host mywebsite using these provider, docker,and VPS"
-        />
-        <TechService
-          title={"Linux"}
-          icon={[
-            { icon: <SiUbuntu size={"40px"} color="red" />, name: "Ubuntu" },
-            {
-              icon: <SiArchlinux size={"40px"} color="blue" />,
-              name: "Arch Linux",
-            },
-            { icon: <SiDebian size={"40px"} color="red" />, name: "Debian" },
-          ]}
-          description="I also use this operating system"
         />
         <TechService
           title={"Devops"}
@@ -197,14 +153,17 @@ const Services = () => {
               name: "Github Actions",
             },
             {
-              icon: <FaGitlab size={"40px"} color="red" />,
-              name: "Gitlab",
+              icon: <SiCloudflare color="orange" size={"40px"}/>,
+              name: "Cloudflare"
             },
             {
-              icon: <SiIstio size={"40px"} color="lightblue"/>,
-              name: "Istio Ingress"
-            
+              icon: <FaExpeditedssl size="40px" color="green"/>,
+              name: "SSL/TLS"
             },
+           {
+            icon: <FaServer size={"40px"}/>,
+            name: "Web server"
+           },
             {
               icon: <SiPrometheus size={"40px"} color="red" />,
               name: "Prometheus",
@@ -218,6 +177,58 @@ const Services = () => {
           ]}
           description="I also knows devops tools"
         />
+        <TechService
+          title={"Cyber Security"}
+          description="I pentest my app to enhance security and stability system"
+          icon={[
+            {
+              icon:  <SiKalilinux color="blue" size={"40px"}/>,
+              name: "Kali linux"
+            },
+            {
+             icon: <SiBurpsuite color="orange" size={"40px"} />,
+             name: "Burpsuite"
+            },
+            {
+              icon: <SiZap color="darkblue" size={"40px"} />,
+              name: "ZAP"
+             },
+             {
+              icon: <SiWireshark color="darkblue" size={"40px"} />,
+              name: "Wireshark"
+             },
+             {
+              icon: <SiK6 color="blue" size={"40px"} />,
+              name:"K6"
+             }
+          ]}
+        />
+          <TechService
+          title={"Networking"}
+          description="I know some networking knowledge"
+          icon={[
+            {
+              icon: <BsRouter size={"40px"}/>,
+              name: "Router"
+            },
+            {
+              icon: <SiOpenwrt size={"40px"} />,
+              name: "OpenWRT"
+            },
+            {
+              icon: <SiMikrotik size={"40px"} color="blue" />,
+              name: "Mikrotik"
+            },
+            {
+              icon: <SiCisco size={"40px"}/>,
+              name: "Cisco packet tracer"
+            },
+            {
+              icon: <MdVpnKey size={"40px"} />,
+              name: "VPN"
+            }
+          ]}
+          />
         <TechService
           title={"Programming language"}
           icon={[
@@ -234,6 +245,8 @@ const Services = () => {
               name: "PHP",
             },
             { icon: <SiRust size={"40px"} color="black" />, name: "Rust" },
+            { icon: <SiC size={"40px"} color="darkblue" />, name: "C" },
+            { icon: <SiPython size={"40px"} color="blue" />, name: "Python" },
           ]}
           description="I am familiar with these programming languages"
         />

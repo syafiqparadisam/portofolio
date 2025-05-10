@@ -50,7 +50,7 @@ const NavigationBar = () => {
       <div className="minilaptop:m-5 m-2 flex minilaptop:justify-center items-center justify-between minilaptop:w-36 w-full">
         <Link
           to={"/"}
-          className="text-white  font-bold font-helvetica text-2xl flex"
+          className="text-white font-poppins font-bold  font-mono text-2xl flex"
         >
           <FaCode color="black" />
           syafiq
@@ -173,7 +173,7 @@ const NavigationBar = () => {
                     </Link>
                     <Link
                       to={"/achievement"}
-                      className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-b-md px-2 hover:bg-purple-300 w-full py-3 h-full"
+                      className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-md px-2 hover:bg-purple-300 w-full py-3 h-full"
                     >
                       <div>Achievement</div>
                     </Link>
@@ -215,7 +215,7 @@ const NavigationBar = () => {
               <div className="flex w-full items-center justify-start h-full rounded-md hover:bg-purple-500 hover:text-white">
                 <Link
                   to={"/achievement"}
-                  className="font-semibold w-full text-sm text-white pl-10 text-left py-3 "
+                  className="font-semibold w-full text-sm text-white pl-10 text-left py-3"
                 >
                   Achievement
                 </Link>
