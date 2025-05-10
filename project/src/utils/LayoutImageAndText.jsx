@@ -189,6 +189,19 @@ const LayoutImageAndText = ({
               data-aos="fade-right"
             >
               {description}
+              {link && (
+                <>
+                  <br />
+                  <a
+                    className={"text-blue-700 cursor-pointer"}
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link}
+                  </a>
+                </>
+              )}
             </p>
           </div>
         </div>

@@ -10,6 +10,11 @@ import sertiJS from "/images/sertidicodingjs.png";
 import sertiBackend from "/images/sertibackend.png";
 import sertiC from "/images/sertiC.png";
 import sertiCodehero from "/images/serti-codehero.png"
+import sertiDevops from "/images/sertidicoding-devops.png"
+import sertiJaringan from "/images/sertidicoding-jaringankomputer.png"
+import sertiCynation from "/images/serticynationcyber.png"
+import sertiLksCyberSidoarjo from "/images/sertilkscybersidoarjo.png"
+import sertiLksCyberJatim from "/images/sertilksjatimcyber.png"
 
 const Achievement = () => {
   return (
@@ -32,6 +37,9 @@ const Achievement = () => {
           <AchievementImage src={sertiBackend} />
           <AchievementImage src={sertiC} />
           <AchievementImage src={sertiSolid} />
+          <AchievementImage src={sertiDevops}/>
+          <AchievementImage src={sertiJaringan}/>
+          
         </div>
       </div>
       <div className="w-full px-10 pt-16 flex flex-col justify-center text-white">
@@ -40,6 +48,9 @@ const Achievement = () => {
         <div className="flex minilaptop:justify-start justify-center mx-auto items-center p-8 minilaptop:gap-20 gap-5 flex-wrap">
           <AchievementImage src={sertiFitcom} />
           <AchievementImage src={sertiCodehero} />
+          <AchievementImage src={sertiCynation}/>
+          <AchievementImage src={sertiLksCyberSidoarjo}/>
+          <AchievementImage src={sertiLksCyberJatim}/>
         </div>
       </div>
     </div>

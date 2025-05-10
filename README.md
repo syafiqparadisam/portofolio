@@ -12,8 +12,9 @@ Hello everyone i've created my portofolio website this website contains my perso
 1. **Docker**
 2. **Netlify**
 
+## How To Running this website
 If you wants to learn how can i build this website, you can follow this step
-### 1. Clone this repo
+### 1. Clone the repository
 ```
 git clone https://github.com/syafiqparadisam/portofolio.git
 ```
@@ -29,7 +30,22 @@ VITE_SERVICE_ID=
 VITE_PUBLIC_KEY=
 VITE_TEMPLATE_ID=
 ```
-you can fill this value from emailjs, please read the docs on there website
+you can fill this value from emailjs, please read the docs on those website
+
+### 4. Install Dependencies
+```
+cd .. // go back to root directory
+npm i // Optional for commitlint, and husky
+cd project && npm install // required for website
+```
+
+### 5. Run project
+```
+npm run dev
+```
+
+### 6. Open Website 
+http://localhost:5100
 
 ## Contact and Support
 
