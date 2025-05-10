@@ -1,7 +1,6 @@
 import LayoutImageAndText from "../utils/LayoutImageAndText";
 import Headers from "../utils/Headers";
 import ramadhanWebsite from "/images/ramadhanWebsite.png";
-import eccomerseWebsite from "/images/eccomerse2.jpg";
 import kosloka from "/images/kosloka-filament.png";
 
 const Projects = () => {
