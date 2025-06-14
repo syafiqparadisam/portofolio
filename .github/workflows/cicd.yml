@@ -3,7 +3,12 @@ name: Ci and Cd
 on:
   push:
     branches:
-      - "*"
+      - "develop"
+      - "releases/v2.x.x"
+      - "releases/v1.0"
+  pull_request:
+    branches:
+      - main
 
 jobs:
   linting:
@@ -31,7 +36,7 @@ jobs:
     name: Push to docker hub
     runs-on: ubuntu-22.04
     needs: linting
-    if: ${{github.ref == 'refs/heads/main'}}
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Checkout repository
