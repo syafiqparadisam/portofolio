@@ -6,7 +6,6 @@ const LayoutImageAndText = ({
   video,
   cursor,
   link,
-  alt,
   color,
 }) => {
   return (
@@ -30,7 +29,7 @@ const LayoutImageAndText = ({
                     <img
                       onClick={() => window.open(link)}
                       src={image}
-                      alt={alt}
+                      alt={image}
                       width={"1600px"}
                       height={"900px"}
                       className="overflow-hidden mx-auto rounded-md minilaptop:mb-0 mb-2"
@@ -53,7 +52,7 @@ const LayoutImageAndText = ({
                   <>
                     <img
                       src={image}
-                      alt={alt}
+                      alt={image}
                       width={"1600px"}
                       height={"900px"}
                       className="overflow-hidden mx-auto rounded-md minilaptop:mb-0 mb-2"
@@ -139,7 +138,7 @@ const LayoutImageAndText = ({
                     <img
                       onClick={() => window.open(link)}
                       src={image}
-                      alt={alt}
+                      alt={image}
                       width={"1600px"}
                       height={"900px"}
                       className="overflow-hidden mx-auto rounded-md"
@@ -162,7 +161,7 @@ const LayoutImageAndText = ({
                   <>
                     <img
                       src={image}
-                      alt={alt}
+                      alt={image}
                       width={"1600px"}
                       height={"900px"}
                       className="overflow-hidden mx-auto rounded-md minilaptop:mb-0 mb-2"

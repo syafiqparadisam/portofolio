@@ -43,7 +43,7 @@ const TechService = ({
         </div>
       </div>
       {modalBox && (
-        <div className="fixed  max-w-2xl tablet:block hidden" ref={modalRef}>
+        <div className="fixed  max-w-2xl tablet:block hidden" ref={modalRef} data-aos="fade-up" data-aos-duration="500">
           <div className="bg-white shadow-lg p-5 flex-wrap justify-center flex gap-10 rounded-lg">
             {icon.map((i) => {
               return (

@@ -97,8 +97,8 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="w-full flex flex-col bg-purple-500 justify-center items-center font-bold opacity-40 font-mono pt-3 gap-1">
-        <div className="flex items-center gap-4">
+      <div className="w-full flex flex-col bg-purple-500 text-purple-900 justify-center items-center font-extrabold pt-3 gap-1">
+        <div className="flex items-center text-white gap-4">
           <a
             href="https://www.instagram.com/syafiqparadisam/?igshid=ZGUzMzM3NWJiOQ=="
             target="_blank"
@@ -136,7 +136,7 @@ const Footer = () => {
             </div>
           </a>
         </div>
-        <div className="flex items-center gap-1 pt-2">
+        <div className="flex text-white items-center gap-1 pt-2">
           <BiCopyright />
           <p>Copyright 2023 All Right Reserved</p>
         </div>

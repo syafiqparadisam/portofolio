@@ -50,13 +50,15 @@ const NavigationBar = () => {
       <div className="minilaptop:m-5 m-2 flex minilaptop:justify-center items-center justify-between minilaptop:w-36 w-full">
         <Link
           to={"/"}
-          className="text-white font-poppins font-bold  font-mono text-2xl flex"
+          aria-label=""
+          className="text-white font-helvetica font-bold  font-mono text-2xl flex"
         >
           <FaCode color="black" />
-          syafiq
+          Syafiq
         </Link>
         {/* HAMBURGER MENU */}
         <button
+          name="hamburgermenu"
           className="minilaptop:hidden block hover:bg-purple-500 p-3 rounded-lg menubar"
           onClick={() => {
             setHamburgerMenu((v) => !v);
@@ -231,6 +233,7 @@ const NavigationBar = () => {
           href="https://github.com/syafiqparadisam"
           target="_blank"
           rel="noreferrer"
+          aria-label="github"
         >
           <div className="p-4">
             <BsGithub size={"25px"} color="white" />
@@ -240,6 +243,7 @@ const NavigationBar = () => {
           href="https://www.instagram.com/syafiqparadisam/?igshid=ZGUzMzM3NWJiOQ=="
           target="_blank"
           rel="noreferrer"
+          aria-label="instagram"
         >
           <div className="p-4">
             <BsInstagram size={"25px"} color="white" />
