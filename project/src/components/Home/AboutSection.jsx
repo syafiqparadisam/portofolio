@@ -21,7 +21,7 @@ const AboutSection = () => {
 					description="I am currently enrolled at SMK 2 Antartika in Sidoarjo, East Java, Indonesia. In this school, I am majoring in software engineering. The subjects I am learning include programming using languages such as VB, Java, JS, C#, but I am more focused on delving into the JavaScript language."
 				/>
 
-				<div className="w-full flex justify-center flex-col items-center py-8 bg-purple-200">
+				<div id="experience" className="w-full flex justify-center flex-col items-center py-8 bg-purple-200">
 					<h1 className="font-bold sm:text-2xl text-3xl text-purple-900">
 						Experience
 					</h1>

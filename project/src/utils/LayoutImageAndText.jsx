@@ -8,6 +8,7 @@ const LayoutImageAndText = ({
   link,
   color,
 }) => {
+  console.log(image)
   return (
     <section
       id="myproject"
@@ -21,55 +22,26 @@ const LayoutImageAndText = ({
             } transition ease-in-out duration-300 h-full`}
           >
             {/* if use link user can click image and go to that link*/}
-            {link ? (
+
+            {image ? (
               <>
-                {/* if use image show image, if use video show video*/}
-                {image ? (
-                  <>
-                    <img
-                      onClick={() => window.open(link)}
-                      src={image}
-                      alt={image}
-                      width={"1600px"}
-                      height={"900px"}
-                      className="overflow-hidden mx-auto rounded-md minilaptop:mb-0 mb-2"
-                      data-aos="zoom-in"
-                    />
-                  </>
-                ) : (
-                  <>
-                    <video autoPlay loop muted>
-                      <source src={video} type="video/mp4" />
-                    </video>
-                  </>
-                )}
-                {/* if use image show image, if use video show video*/}
+                <img
+                  src={image}
+                  onClick={() => window.open(image, "_blank")}
+                  alt={image}
+                  width={"1600px"}
+                  height={"900px"}
+                  className="overflow-hidden mx-auto rounded-md minilaptop:mb-0 mb-2"
+                  data-aos="zoom-in"
+                />
               </>
             ) : (
               <>
-                {/* if use image show image, if use video show video*/}
-                {image ? (
-                  <>
-                    <img
-                      src={image}
-                      alt={image}
-                      width={"1600px"}
-                      height={"900px"}
-                      className="overflow-hidden mx-auto rounded-md minilaptop:mb-0 mb-2"
-                      data-aos="zoom-in"
-                    />
-                  </>
-                ) : (
-                  <>
-                    <video autoPlay loop muted>
-                      <source src={video} type="video/mp4" />
-                    </video>
-                  </>
-                )}
-                {/* if use image show image, if use video show video*/}
+                <video autoPlay loop muted>
+                  <source src={video} type="video/mp4" />
+                </video>
               </>
             )}
-            {/* if use link user can click image and go to that link*/}
           </div>
 
           <div className="minilaptop:text-left lg:block flex justify-between items-center text-center minilaptop:w-3/5 w-full mx-auto font-medium lg:mt-0 tablet:mt-5 mt-10">
@@ -129,56 +101,25 @@ const LayoutImageAndText = ({
               cursor ? cursor : "cursor-pointer"
             } transition ease-in-out duration-300 h-full`}
           >
-            {/* if use link user can click image and go to that link*/}
-            {link ? (
+            {image ? (
               <>
-                {/* if use image show image, if use video show video*/}
-                {image ? (
-                  <>
-                    <img
-                      onClick={() => window.open(link)}
-                      src={image}
-                      alt={image}
-                      width={"1600px"}
-                      height={"900px"}
-                      className="overflow-hidden mx-auto rounded-md"
-                      data-aos="zoom-in"
-                    />
-                  </>
-                ) : (
-                  <>
-                    <video autoPlay loop muted>
-                      <source src={video} type="video/mp4" />
-                    </video>
-                  </>
-                )}
-                {/* if use image show image, if use video show video*/}
+                <img
+                  onClick={() => window.open(image, "_blank")}
+                  src={image}
+                  alt={image}
+                  width={"1600px"}
+                  height={"900px"}
+                  className="overflow-hidden mx-auto rounded-md"
+                  data-aos="zoom-in"
+                />
               </>
             ) : (
               <>
-                {/* if use image show image, if use video show video*/}
-                {image ? (
-                  <>
-                    <img
-                      src={image}
-                      alt={image}
-                      width={"1600px"}
-                      height={"900px"}
-                      className="overflow-hidden mx-auto rounded-md minilaptop:mb-0 mb-2"
-                      data-aos="zoom-in"
-                    />
-                  </>
-                ) : (
-                  <>
-                    <video autoPlay loop muted>
-                      <source src={video} type="video/mp4" />
-                    </video>
-                  </>
-                )}
-                {/* if use image show image, if use video show video*/}
+                <video autoPlay loop muted>
+                  <source src={video} type="video/mp4" />
+                </video>
               </>
             )}
-            {/* if use link user can click image and go to that link*/}
           </div>
           <div className="minilaptop:text-left block lg:hidden justify-between items-center text-center minilaptop:w-3/5 w-full mx-auto font-medium lg:mt-0 tablet:mt-5 mt-10">
             <p

@@ -22,6 +22,9 @@ const Footer = () => {
           <Link to={"/project"} onClick={goto}>
             Projects
           </Link>
+          <Link to={"https://blog.syafiq-paradisam.my.id"} onClick={goto}>
+            Blog
+          </Link>
           <Link to={"/testimoni"} onClick={goto}>
             Testimoni
           </Link>
@@ -56,14 +59,14 @@ const Footer = () => {
             <p>Golang Developer</p>
           </Link>
         </div>
-        <div className="flex flex-col leading-7 text-left items-start tablet:justify-start">
+        <div className="flex flex-col leading-7 text-left items-start  tablet:justify-start">
           <h1 className="font-bold text-lg mb-2">About Us</h1>
-          <Link to={""} onClick={goto}>
+          <Link to={"/#experience"} onClick={goto}>
             <p>EXPERIENCE</p>
           </Link>
 
           <a
-            href="http://smkantartika2-sda.sch.id"
+            href="https://smkantartika2-sda.sch.id"
             target="_blank"
             rel="noreferrer"
           >
