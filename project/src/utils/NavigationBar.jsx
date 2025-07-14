@@ -105,7 +105,7 @@ const NavigationBar = () => {
           </li>
           <li className="text-white minilaptop:text-white flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
             <Link
-              to="https://blog.syafiq-paradisam.my.id" target="_blank"
+              to="https://syafiq-paradisam.my.id" target="_blank"
               className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
             >
               Blog
