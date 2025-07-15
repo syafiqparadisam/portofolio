@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://portfolio.syafiq-paradisam.my.id/</loc>
+		<lastmod>2025-07-14</lastmod>
+		  <changefreq>monthly</changefreq>
+	</url>
+	<url>
 		<loc>https://portfolio.syafiq-paradisam.my.id/contact</loc>
-		<priority>0.80</priority>
-		<lastmod>2025-06-14</lastmod>
+		<lastmod>2025-07-14</lastmod>
+		  <changefreq>monthly</changefreq>
 	</url>
 	<url>
 		<loc>https://portfolio.syafiq-paradisam.my.id/testimoni</loc>
-		<priority>0.80</priority>
-		<lastmod>2025-06-14</lastmod>
+		<lastmod>2025-07-14</lastmod>
+		  <changefreq>monthly</changefreq>
 	</url>
 	<url>
-		<loc>https://portfolio.syafiq-paradisam.my.id/achiviement</loc>
-		<priority>0.80</priority>
-		<lastmod>2025-06-14</lastmod>
+		<loc>https://portfolio.syafiq-paradisam.my.id/achievement</loc>
+		<lastmod>2025-07-14</lastmod>
+		  <changefreq>monthly</changefreq>
 	</url>
 	<url>
 		<loc>https://portfolio.syafiq-paradisam.my.id/project</loc>
-		<priority>0.80</priority>
-		<lastmod>2025-06-14</lastmod>
+		<lastmod>2025-07-14</lastmod>
+		  <changefreq>monthly</changefreq>
 	</url>
 	<url>
 		<loc>https://portfolio.syafiq-paradisam.my.id/services</loc>
-		<priority>0.80</priority>
-		<lastmod>2025-06-14</lastmod>
+		<lastmod>2025-07-14</lastmod>
+		  <changefreq>monthly</changefreq>
 	</url>
 	<url>
 		<loc>https://portfolio.syafiq-paradisam.my.id/HowToOrder</loc>
-		<priority>0.80</priority>
-		<lastmod>2025-06-14</lastmod>
+		<lastmod>2025-07-14</lastmod>
+		  <changefreq>monthly</changefreq>
 	</url>
-	<url>
-		<loc>https://portfolio.syafiq-paradisam.my.id</loc>
-		<priority>0.80</priority>
-		<lastmod>2025-06-14</lastmod>
-	</url>
+
 </urlset>
