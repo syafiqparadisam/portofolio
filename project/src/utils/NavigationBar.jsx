@@ -1,18 +1,16 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import { BsGithub, BsInstagram } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
 import { SlMenu } from "react-icons/sl";
 import "../index.css";
+import routes from "../routes";
 
 const NavigationBar = () => {
-  const [dropdown, setDropDown] = useState(false);
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
   const [transition, setTransition] = useState(
     "minilaptop:translate-x-0 translate-x-[1000px] w-full"
   );
-  const [arrow, setArrow] = useState();
 
   window.document.body.onclick = (e) => {
     if (e.target.classList.contains("others")) {
@@ -89,7 +87,7 @@ const NavigationBar = () => {
         >
           <li className="text-white minilaptop:text-white minilaptop:hidden flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
             <Link
-              to="/"
+              to={routes.home}
               className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
             >
               Home
@@ -97,7 +95,7 @@ const NavigationBar = () => {
           </li>
           <li className="text-white minilaptop:text-white flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
             <Link
-              to="/project"
+              to={routes.project}
               className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
             >
               Project
@@ -105,7 +103,8 @@ const NavigationBar = () => {
           </li>
           <li className="text-white minilaptop:text-white flex rounded-md minilaptop:w-28 w-full minilaptop:text-center text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
             <Link
-              to="https://syafiq-paradisam.my.id" target="_blank"
+              to={routes.blog}
+              target="_blank"
               className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
             >
               Blog
@@ -113,7 +112,7 @@ const NavigationBar = () => {
           </li>
           <li className="text-white minilaptop:text-white rounded-md minilaptop:text-center flex minilaptop:w-28 w-full text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
             <Link
-              to="/contact"
+              to={routes.contact}
               className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
             >
               Contact
@@ -121,116 +120,20 @@ const NavigationBar = () => {
           </li>
           <li className="text-white minilaptop:text-white flex rounded-md minilaptop:text-center minilaptop:w-28 w-full text-left font-medium  hover:bg-purple-500 hover:text-white hover:transition-colors">
             <Link
-              to="/services"
+              to={routes.skill}
               className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
             >
-              Services
+              Skill
             </Link>
           </li>
-          <li
-            onClick={() => {
-              setTransition(
-                "minilaptop:translate-x-0 translate-x-[0px] w-full"
-              );
-              setDropDown(true);
-            }}
-            onMouseOver={() => {
-              setDropDown(true);
-              setArrow("rotate-180 transition ease-in-out duration-100");
-            }}
-            onMouseOut={() => {
-              setDropDown(false);
-              setArrow("rotate-0 transition ease-in-out duration-100");
-            }}
-            className="relative others minilaptop:text-white minilaptop:justify-center justify-start minilaptop:w-fit w-full flex minilaptop:text-center text-left text-white text-lg rounded-md py-2 minilaptop:px-3 font-medium hover:bg-purple-500 hover:text-white hover:transition-all items-center pl-6"
-          >
-            Others
-            <RiArrowDropDownLine
-              size={"30px"}
-              className={`${arrow} minilaptop:block hidden`}
-            />
-            {dropdown && hamburgerMenu === false && (
-              <>
-                <div
-                  onMouseOver={() => {
-                    setDropDown(true);
-                    setArrow("rotate-180 transition ease-in-out duration-100");
-                  }}
-                  onMouseOut={() => {
-                    setDropDown(false);
-                    setArrow("rotate-0 transition ease-in-out duration-100");
-                  }}
-                  className="text-black w-44 minilaptop:absolute flex flex-col rounded-md bg-purple-800 shadow-xl"
-                  style={{
-                    top: "46px",
-                    left: "0%",
-                  }}
-                >
-                  {/* For Large Device */}
-                  <div className="minilaptop:flex hidden flex-col w-full h-full justify-center items-start">
-                    <Link
-                      to={"/HowToOrder/"}
-                      className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-t-md px-2 hover:bg-purple-300 w-full py-3 h-full"
-                    >
-                      <div>Instruction</div>
-                    </Link>
-                    <Link
-                      to={"/testimoni"}
-                      className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-md px-2 hover:bg-purple-300 w-full py-3 h-full"
-                    >
-                      <div>Testimoni</div>
-                    </Link>
-                    <Link
-                      to={"/achievement"}
-                      className="flex justify-start font-semibold text-sm text-white text-left items-center rounded-md px-2 hover:bg-purple-300 w-full py-3 h-full"
-                    >
-                      <div>Achievement</div>
-                    </Link>
-                  </div>
-                </div>
-              </>
-            )}
-          </li>
-          {/* For Mini Device */}
-
-          {dropdown && hamburgerMenu && window.innerWidth < 700 && (
-            <div
-              className="flex flex-col w-full"
-              onMouseOver={() => {
-                setDropDown(true);
-                setArrow("rotate-180 transition ease-in-out duration-100");
-              }}
-              onMouseOut={() => {
-                setDropDown(false);
-                setArrow("rotate-0 transition ease-in-out duration-100");
-              }}
+          <li className="text-white minilaptop:text-white flex rounded-md minilaptop:text-center minilaptop:w-36 w-full text-left font-medium hover:bg-purple-500 hover:text-white hover:transition-colors">
+            <Link
+              to={routes.achiviement}
+              className="w-full py-2 text-lg h-full px-6 minilaptop:px-0"
             >
-              <div className="flex w-full items-center justify-start h-full rounded-md hover:bg-purple-500 hover:text-white ">
-                <Link
-                  to={"/HowToOrder/"}
-                  className="font-semibold w-full text-sm text-white pl-10 text-left py-3 "
-                >
-                  Instruction
-                </Link>
-              </div>
-              <div className="flex w-full items-center justify-start h-full rounded-md hover:bg-purple-500 hover:text-white">
-                <Link
-                  to={"/testimoni"}
-                  className="font-semibold w-full text-sm text-white pl-10 text-left py-3 "
-                >
-                  Testimoni
-                </Link>
-              </div>
-              <div className="flex w-full items-center justify-start h-full rounded-md hover:bg-purple-500 hover:text-white">
-                <Link
-                  to={"/achievement"}
-                  className="font-semibold w-full text-sm text-white pl-10 text-left py-3"
-                >
-                  Achievement
-                </Link>
-              </div>
-            </div>
-          )}
+              Achiviement
+            </Link>
+          </li>
         </ol>
       </div>
 

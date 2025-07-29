@@ -29,6 +29,7 @@ import {
   SiOpenwrt,
   SiMikrotik,
   SiCisco,
+  SiVuedotjs,
 } from "react-icons/si";
 import { BsRouter } from "react-icons/bs";
 import { MdVpnKey } from "react-icons/md";
@@ -85,6 +86,10 @@ const Services = () => {
               {
                 icon: <SiReact size={"40px"} color="lightblue" />,
                 name: "ReactJS",
+              },
+                {
+                icon: <SiVuedotjs size={"40px"} color="green" />,
+                name: "VueJS",
               },
               {
                 icon: <BiLogoTailwindCss size={"40px"} color="skyBlue" />,

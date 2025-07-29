@@ -15,6 +15,7 @@ import sertiJaringan from "/picture/certified/sertidicodingnetworking.webp";
 import sertiCynation from "/picture/certified/serticynation.webp";
 import sertiLksCyberSidoarjo from "/picture/certified/sertilkscybersidoarjo.webp";
 import sertiLksCyberJatim from "/picture/certified/sertilksjatimcyber.webp";
+import sertiNetworkingCisco from "/picture/certified/networkingcisco-certi.webp";
 import Seo from "../components/Seo";
 
 const Achievement = () => {
@@ -22,9 +23,7 @@ const Achievement = () => {
     <>
       <Seo
         title="Achiviement"
-        description={
-          "List of my achiviement"
-        }
+        description={"List of my achiviement"}
         name={"Achiviement Syafiq"}
         type={"website"}
       />
@@ -49,6 +48,13 @@ const Achievement = () => {
             <AchievementImage src={sertiSolid} />
             <AchievementImage src={sertiDevops} />
             <AchievementImage src={sertiJaringan} />
+          </div>
+        </div>
+        <div className="w-full px-10 pt-16 flex flex-col justify-center text-white">
+          <h1 className="font-bold text-2xl pb-2">Cisco.com</h1>
+          <hr className="w-full text-xl font-bold" />
+          <div className="flex minilaptop:justify-start justify-center mx-auto items-center p-8 minilaptop:gap-20 gap-5 flex-wrap">
+            <AchievementImage src={sertiNetworkingCisco} />
           </div>
         </div>
         <div className="w-full px-10 pt-16 flex flex-col justify-center text-white">

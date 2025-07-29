@@ -5,12 +5,11 @@ import Layout from "./utils/Layout";
 import { useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import Aos from "aos";
-import Services from "./pages/Services";
+import Skill from "./pages/Skill";
 import Projects from "./pages/Projects";
-import Testimonial from "./pages/Testimonial";
-import HowToOrder from "./pages/HowToOrder";
 import Contact from "./pages/Contact";
 import Achievement from "./pages/Achievement";
+import routes from "./routes";
 
 const App = () => {
   useEffect(() => {
@@ -21,7 +20,7 @@ const App = () => {
       offset: 150,
     });
   }, []);
-const helmetContext = {};
+  const helmetContext = {};
   return (
     <>
       <HelmetProvider context={helmetContext}>
@@ -29,12 +28,10 @@ const helmetContext = {};
           <Routes>
             <Route element={<Layout />}>
               <Route index element={<Home />} />
-              <Route path="HowToOrder" element={<HowToOrder />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="testimoni" element={<Testimonial />} />
-              <Route path="achievement" element={<Achievement />} />
-              <Route path="project" element={<Projects />} />
-              <Route path="services" element={<Services />} />
+              <Route path={routes.contact} element={<Contact />} />
+              <Route path={routes.achiviement} element={<Achievement />} />
+              <Route path={routes.project} element={<Projects />} />
+              <Route path={routes.skill} element={<Skill />} />
             </Route>
           </Routes>
         </BrowserRouter>
