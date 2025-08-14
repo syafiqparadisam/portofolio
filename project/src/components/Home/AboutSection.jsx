@@ -7,7 +7,7 @@ const AboutSection = () => {
 	return (
 		<section
 			id="about"
-			className="w-full h-full flex flex-col justify-center bg-purple-500 pt-2"
+			className="w-full h-full flex flex-col shadow-xl justify-center bg-purple-500 pt-2"
 		>
 			{/* CARD */}
 			<div className="flex justify-center items-center w-full flex-col">

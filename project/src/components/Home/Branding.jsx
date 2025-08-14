@@ -7,7 +7,7 @@ import BrandingSosmed from "./BrandingSosmed";
 const Branding = () => {
   return (
     <main
-      className="h-screen lg:justify-around justify-center w-full items-center flex text-white"
+      className="h-screen lg:justify-around shadow-xl justify-center w-full items-center flex text-white"
       style={{
         backgroundImage:
           "radial-gradient(circle, #7800b2, #7300aa, #6d00a2, #68009b, #630093)",
@@ -83,13 +83,22 @@ const Branding = () => {
             I Live In Sidoarjo, East Java Indonesia
             <br />I Will Make Your Better Website
           </p>
-          <Link
-            to="/services"
-            className="shadow-4xl font-semibold bg-gray-200 text-purple-900 minilaptop:py-3 py-2 px-6 rounded-xl minilaptop:text-lg hp:text-sm text-xs"
-            data-aos="fade-down"
-          >
-            Service
-          </Link>
+          <div className="flex w-full gap-4">
+            <Link
+              to="/services"
+              className="shadow-4xl font-semibold bg-gray-200 text-purple-900 minilaptop:py-3 py-2 px-6 rounded-xl minilaptop:text-lg hp:text-sm text-xs"
+              data-aos="fade-down"
+            >
+              Service
+            </Link>
+            <Link
+              to="https://www.cake.me/syafiq-paradisam" target="_blank"
+              className="shadow-4xl font-semibold text-gray-200 border-gray-200 border bg-purple-900 minilaptop:py-3 py-2 px-6 rounded-xl minilaptop:text-lg hp:text-sm text-xs"
+              data-aos="fade-down"
+            >
+              Resume
+            </Link>
+          </div>
         </div>
       </div>
       <div data-aos="fade-left" className="w-1/2 minilaptop:block hidden">
