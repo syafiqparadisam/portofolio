@@ -1,14 +1,16 @@
 name: Ci and Cd
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - "develop"
       - "releases/v2.x.x"
       - "releases/v1.0"
-  pull_request:
-    branches:
-      - main
+      - "main"
+  
 
 jobs:
   linting:
