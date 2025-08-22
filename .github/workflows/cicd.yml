@@ -10,8 +10,7 @@ on:
       - "releases/v2.x.x"
       - "releases/v1.0"
       - "main"
-  
-
+      
 jobs:
   linting:
     name: Test and linting
