@@ -40,7 +40,7 @@ const NotFoundPage = () => {
         onClick={() => navigate(routes["home"])}
         className="flex items-center mt-3 px-6 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg shadow hover:bg-blue-700 transition"
       >
-       <FaArrowLeft className="mr-3" />
+       <FaArrowLeft className="mr-2" />
         Back
       </button>
     </div>
