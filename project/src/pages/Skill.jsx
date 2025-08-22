@@ -4,7 +4,6 @@ import {
   SiGit,
   SiGithub,
   SiGithubactions,
-  SiJaeger,
   SiKubernetes,
   SiNestjs,
   SiNextdotjs,
@@ -12,24 +11,20 @@ import {
   SiPrometheus,
   SiRedis,
   SiRust,
-  SiBurpsuite,
-  SiC,
   SiPhp,
   SiReact,
   SiNginx,
   SiSwagger,
   SiLaravel,
-  SiFlask,
   SiPython,
-  SiKalilinux,
   SiCloudflare,
-  SiZap,
-  SiK6,
-  SiWireshark,
   SiOpenwrt,
-  SiMikrotik,
   SiCisco,
   SiVuedotjs,
+  SiFlutter,
+  SiDart,
+  SiSupabase,
+  SiFirebase,
 } from "react-icons/si";
 import { BsRouter } from "react-icons/bs";
 import { MdVpnKey } from "react-icons/md";
@@ -99,6 +94,10 @@ const Services = () => {
                 icon: <FaBootstrap size={"40px"} color="blue" />,
                 name: "Bootstrap",
               },
+              {
+                 icon: <SiFlutter size={"40px"} color="lightblue" />,
+                name: "Flutter",
+              }
             ]}
             description="I can build website with framework or native"
           />
@@ -122,11 +121,11 @@ const Services = () => {
                 name: "Golang",
               },
               {
-                icon: <SiFlask size={"40px"} />,
-                name: "Flask",
+                icon: <SiRust size={"40px"} />,
+                name: "Rust",
               },
             ]}
-            description="I can build backend system with node.js, golang, laravel, flask"
+            description="I can build backend system with node.js, golang, laravel, rust"
           />
           <TechService
             title={"Database"}
@@ -147,6 +146,14 @@ const Services = () => {
                 icon: <SiPostgresql size={"40px"} color="blue" />,
                 name: "PostgreSQL",
               },
+              {
+                icon: <SiSupabase size={"40px"} color="green" />,
+                name: "Supabase"
+              },
+               {
+                icon: <SiFirebase size={"40px"} color="orange" />,
+                name: "Firebase"
+              }
             ]}
             description="I have used these database such as SQL, NoSQL, InMemory, and more"
           />
@@ -199,39 +206,12 @@ const Services = () => {
                 name: "Prometheus",
               },
               { icon: <SiDocker size={"45px"} color="blue" />, name: "Docker" },
-              { icon: <SiJaeger size={"40px"} color="cyan" />, name: "Jaeger" },
               {
                 icon: <SiAnsible size={"40px"} color="black" />,
                 name: "Ansible",
               },
             ]}
             description="I also knows devops tools"
-          />
-          <TechService
-            title={"Cyber Security"}
-            description="I pentest my app to enhance security and stability system"
-            icon={[
-              {
-                icon: <SiKalilinux color="blue" size={"40px"} />,
-                name: "Kali linux",
-              },
-              {
-                icon: <SiBurpsuite color="orange" size={"40px"} />,
-                name: "Burpsuite",
-              },
-              {
-                icon: <SiZap color="darkblue" size={"40px"} />,
-                name: "ZAP",
-              },
-              {
-                icon: <SiWireshark color="darkblue" size={"40px"} />,
-                name: "Wireshark",
-              },
-              {
-                icon: <SiK6 color="blue" size={"40px"} />,
-                name: "K6",
-              },
-            ]}
           />
           <TechService
             title={"Networking"}
@@ -244,10 +224,6 @@ const Services = () => {
               {
                 icon: <SiOpenwrt size={"40px"} />,
                 name: "OpenWRT",
-              },
-              {
-                icon: <SiMikrotik size={"40px"} color="blue" />,
-                name: "Mikrotik",
               },
               {
                 icon: <SiCisco size={"40px"} />,
@@ -275,8 +251,8 @@ const Services = () => {
                 name: "PHP",
               },
               { icon: <SiRust size={"40px"} color="black" />, name: "Rust" },
-              { icon: <SiC size={"40px"} color="darkblue" />, name: "C" },
               { icon: <SiPython size={"40px"} color="blue" />, name: "Python" },
+              {icon: <SiDart size={"40px"} color="skyblue" />, name: "Dart"}
             ]}
             description="I am familiar with these programming languages"
           />

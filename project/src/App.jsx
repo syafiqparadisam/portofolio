@@ -9,7 +9,8 @@ import Skill from "./pages/Skill";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Achievement from "./pages/Achievement";
-import routes from "./routes";
+import routes from "./routes.js";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const App = () => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const App = () => {
               <Route path={routes.achiviement} element={<Achievement />} />
               <Route path={routes.project} element={<Projects />} />
               <Route path={routes.skill} element={<Skill />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>
         </BrowserRouter>

@@ -6,6 +6,7 @@ import paymentku from "/picture/project/paymentku.webp";
 import ospfCisco from "/picture/project/ospfcisco.webp";
 import vlanCisco from "/picture/project/vlancisco.webp";
 import Seo from "../components/Seo";
+import tokoMadura from '/picture/project/tokomadura.webp'
 
 const Projects = () => {
   return (
@@ -42,14 +43,19 @@ const Projects = () => {
         />
         <LayoutImageAndText
           position={"right"}
-          image={ospfCisco}
-          description="I created a routing simulation using OSPF in Cisco Packet Tracer with several main routers connected through a public network. Each router was configured with a different public IP, and NAT was implemented to translate private IPs to public ones, allowing clients to access the internet. Additionally, I set up a DNS server to ensure proper domain resolution across the entire network."
+          image={tokoMadura}
+          description="This is an eccomerce website of madura shop. The features included CRUD product, price, and stock management. I created with laravel and mysql"
         />
         <LayoutImageAndText
           position={"left"}
           image={vlanCisco}
           bgColor={"bg-purple-300"}
           description="I built a VLAN network topology in Cisco Packet Tracer using inter-VLAN routing. The setup includes a main switch connected via one trunk link to a router (Router-on-a-Stick configuration), and two additional trunk links to child switches. Each VLAN is configured to segment the network logically, and inter-VLAN communication is enabled through subinterfaces on the router. This setup allows devices in different VLANs to communicate efficiently across multiple switches."
+        />
+        <LayoutImageAndText
+          position={"right"}
+          image={ospfCisco}
+          description="I created a routing simulation using OSPF in Cisco Packet Tracer with several main routers connected through a public network. Each router was configured with a different public IP, and NAT was implemented to translate private IPs to public ones, allowing clients to access the internet. Additionally, I set up a DNS server to ensure proper domain resolution across the entire network."
         />
       </div>
     </>
